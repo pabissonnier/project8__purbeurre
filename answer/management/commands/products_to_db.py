@@ -1,7 +1,7 @@
-from .datas_manager import DatasManager
-from answer.models import Categories
+from answer.management.commands.datas_manager import DatasManager
+from answer.models import Products
 
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 import urllib
 import json
 
@@ -21,5 +21,5 @@ class Command(BaseCommand):
                 categories_values = value["name"]
                 categories_list.append(categories_values)
                 for element in categories_list:
-                    category_name = Categories(name=element)
+                    category_name = Products(name=element)
                     category_name.save()

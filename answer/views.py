@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 
-from .models import Products, User, UserList
+
+from .models import Products, UserList
 
 
 def index(request):

@@ -161,7 +161,7 @@ sup {
 }
 
 a {
-  color: #86EBE6;
+  color: #345A61;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2012,7 +2012,7 @@ pre code {
 
 .form-control {
   display: block;
-  width: 100%;
+  width: 80%;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
@@ -2562,7 +2562,7 @@ textarea.form-control {
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #212529;
+  color: #C45525;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -2610,15 +2610,15 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  margin-right: 50px;
-  background-color: #345A61;
-  border-color: #86EBE6;
+  margin-right: 70%;
+  background-color: #DE9440;
+  border-color: #C45525;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #86EBE6;
-  border-color: #fff;
+  background-color: #C45525;
+  border-color: #DE9440;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -6910,7 +6910,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #f4623a !important;
+  background-color: #ffff !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6928,6 +6928,17 @@ button.bg-secondary:hover,
 button.bg-secondary:focus {
   background-color: #545b62 !important;
 }
+
+.bg-tertiary {
+  background-color: #DE9440 !important;
+}
+
+a.bg-tertiary:hover, a.bg-tertiary:focus,
+button.bg-tertiary:hover,
+button.bg-tertiary:focus {
+  background-color: #545b62 !important;
+}
+
 
 .bg-success {
   background-color: #28a745 !important;
@@ -8713,6 +8724,8 @@ button.bg-dark:focus {
 .pb-5,
 .py-5 {
   padding-bottom: 3rem !important;
+  padding-left: 15rem;
+  padding-right: 15rem;
 }
 
 .pl-5,
@@ -10555,6 +10568,10 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+#logo{
+  padding-right: 5px;
+}
+
 body,
 html {
   width: 100%;
@@ -10563,12 +10580,15 @@ html {
 
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75);
+  padding-left: 100px;
+  padding-right: 100px;
+
 }
 
 hr.divider {
   max-width: 3.25rem;
   border-width: 0.2rem;
-  border-color: #f4623a;
+  border-color: #C45525;
 }
 
 hr.light {
@@ -10589,7 +10609,7 @@ hr.light {
 }
 
 .page-section {
-  padding: 8rem 0;
+  padding: 5rem 0;
 }
 
 #mainNav {
@@ -10725,7 +10745,8 @@ header.masthead-search h1 {
 
 #appform{
   margin-top: 5px;
-  margin-left: 15px;
+  margin-left: 30%;
+  width: 70%;
 }
 
 
