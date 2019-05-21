@@ -1,9 +1,9 @@
-from answer.management.commands.datas_manager import DatasManager
-from answer.models import Products
+# -*- coding: utf-8 -*-
+
+from answer.models import Product
+from .datas_manager import DatasManager
 
 from django.core.management.base import BaseCommand
-import urllib
-import json
 
 
 class Command(BaseCommand):
@@ -11,15 +11,9 @@ class Command(BaseCommand):
     categories_list = DatasManager()
 
     def handle(self, *args, **options):
-        categories_json = urllib.request.urlopen('https://fr.openfoodfacts.org/categories.json')
-        categories_read = categories_json.read()
-        categories_data = json.loads(categories_read.decode("utf-8"))
+        datas_from_api = DatasManager()
 
-        categories_list = []
-        for value in categories_data["tags"]:
-            if value["products"] >= 4017:
-                categories_values = value["name"]
-                categories_list.append(categories_values)
-                for element in categories_list:
-                    category_name = Products(name=element)
-                    category_name.save()
+        categories_list = DatasManager.categories_extract(datas_from_api)
+        categories_url_name = DatasManager.category_to_url(datas_from_api, categories_list)
+        products_extract = DatasManager.products_extract(datas_from_api, categories_url_name)
+        DatasManager.get_products_datas(datas_from_api, products_extract)

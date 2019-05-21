@@ -10572,6 +10572,10 @@ a.text-dark:hover, a.text-dark:focus {
   padding-right: 5px;
 }
 
+#user-logo{
+    padding-top: 5px;
+}
+
 body,
 html {
   width: 100%;
