@@ -13,9 +13,9 @@
     </div>
   </header>
   <div class="row h-250 align-items-center justify-content-center text-center">
-     {% for product in products %}
+    {% for product in better_products %}
         <div class="col-sm-4 text center">
-            <a href="/">
+            <a href="{% url 'detail' product_id=product.id %}">
                 <img class="img-thumbnail" src="{{ product.picture }}" alt="{{ product.name }}">
             </a>
             <h3><a href="/">{{ product.name }}</a></h3>

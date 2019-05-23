@@ -9,7 +9,7 @@ from answer import views as answer_views
 urlpatterns = [
     url(r'^$', answer_views.index, name='home'),
     url(r'^answer/', answer_views.app, name='application'),
-    # url(r'^products/', include('product.urls')),
+    url(r'^(?P<product_id>[0-9]+)/$', answer_views.detail, name='detail'),
     url(r'^search/$', answer_views.search, name='search-products'),
     url(r'^admin/', admin.site.urls),
     # url(r'^register/', user_views.register, name='register'),
