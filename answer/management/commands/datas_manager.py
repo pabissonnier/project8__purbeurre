@@ -3,7 +3,7 @@
 import urllib.request
 import json
 from answer.models import Product
-from django.db import IntegrityError
+
 
 
 class DatasManager:
@@ -20,7 +20,7 @@ class DatasManager:
 
         categories_list = []
         for value in categories_data["tags"]:
-            if value["products"] >= 400:
+            if value["products"] > 31132:
                 categories_values = value["name"]
                 categories_list.append(categories_values)
         return categories_list
@@ -60,7 +60,7 @@ class DatasManager:
         for content in products_data["products"]:
             products_dict = {}
             for key, value in content.items():
-                products_dict["nom_category"] = key_list
+                products_dict["category"] = key_list
                 if key == "product_name":
                     products_dict["name"] = value
                 elif key == "url":
@@ -96,13 +96,13 @@ class DatasManager:
 
     def get_products_datas(self, products_lists):
         global product_name_db, product_category_db, product_ingredients_db, product_nutriscore_db, \
-            product_picture_db, product_shops_db, product_link_db
+        product_picture_db, product_shops_db, product_link_db
         for category_products_list in products_lists:
             for products_dicts in category_products_list:
                 for key, value in products_dicts.items():
                     if key == "name":
                         product_name_db = value
-                    elif key == "nom_category":
+                    elif key == "category":
                         product_category_db = value
                     elif key == "ingredients":
                         product_ingredients_db = value
@@ -114,9 +114,11 @@ class DatasManager:
                         product_shops_db = value
                     elif key == "link":
                         product_link_db = value
-                insertion_datas = Products(name= product_name_db, category=product_category_db,
+                insertion_datas = Product(name= product_name_db, category=product_category_db,
                                          ingredients=product_ingredients_db, nutriscore=product_nutriscore_db,
                                            picture=product_picture_db, shops=product_shops_db, link = product_link_db)
                 insertion_datas.save()
-        """except IntegrityError:
-            pass"""
+
+
+    def get_datas_from_list(self, list):
+        pass
