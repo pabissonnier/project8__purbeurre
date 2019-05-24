@@ -10568,6 +10568,11 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+.content-section {
+  width: 50%;
+  margin-top: 100px;
+}
+
 #logo{
   padding-right: 5px;
 }
