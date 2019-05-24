@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from .database_manager import Database_manager
+from django.core.paginator import Paginator
 
 from .models import Product, UserList
 
@@ -32,7 +33,10 @@ def search(request):
 def app(request):
     query = request.GET.get('app-query')
     if not query:
-        products = Product.objects.all()
+        products_list = Product.objects.all()
+        paginator = Paginator(products_list, 5)
+        page = request.Get.get('page')
+        products = paginator.page(page)
     else:
         products = Product.objects.filter(name__icontains=query)
         if not products.exists():
@@ -49,10 +53,20 @@ def app(request):
         'picture': product_picture,
         'nutriscore': product_nutriscore,
         'products': products,
-        'better_products': better_products
+        'better_products': better_products,
     }
     return HttpResponse(render(request, 'answer/results.html', context))
 
 
-def detail(request):
-    pass
+def detail(request, product_id):
+    """ Display details for the product clicked"""
+    product = Product.objects.get(id=product_id)
+    context = {
+        'name': product.name,
+        'picture': product.picture,
+        'nutriscore': product.nutriscore,
+        'ingredients': product.ingredients,
+        'shops': product.shops,
+        'link': product.link
+    }
+    return HttpResponse(render(request, 'answer/detail.html', context))

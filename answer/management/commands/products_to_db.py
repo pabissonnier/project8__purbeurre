@@ -20,3 +20,5 @@ class Command(BaseCommand):
             DatasManager.get_products_datas(datas_from_api, products_extract)
         except IntegrityError:
             pass
+        finally:
+            DatasManager.get_products_datas(datas_from_api, products_extract)
