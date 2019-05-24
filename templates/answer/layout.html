@@ -31,8 +31,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
-      <img id="logo" src="{% static 'answer/img/logo_pur_beurre.png'%}">
-      <a class="navbar-brand js-scroll-trigger" href="/">Purbeurre</a>
+      <a class="navbar-brand js-scroll-trigger" href="/"><img id="logo" src="{% static 'answer/img/logo_pur_beurre.png'%}">Purbeurre</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -43,15 +42,26 @@
               <input type="text" class="form-control form-control-sm" placeholder="Rechercher" id="searchform" name='query'>
             </form>
           </li>
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#account" id="user-logo"><img src="{% static 'answer/img/carrot.png'%}"> </a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="{% url 'register' %}" id="user-logo"><img src="{% static 'answer/img/user.png'%}"> </a>
+                </li>
+            {% endif %}
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services" id="user-logo"><img src="{% static 'answer/img/user.png'%}"> </a>
+            <a class="nav-link js-scroll-trigger" href="#favs" id="carrot-logo"><img src="{% static 'answer/img/carrot.png'%}"></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio" id="carrot-logo"><img src="{% static 'answer/img/carrot.png'%}"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact" id="logout-logo"><img src="{% static 'answer/img/logout.png'%}"></a>
-          </li>
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="{% url 'logout' %}" id="logout-logo"><img src="{% static 'answer/img/logout.png'%}"></a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                </li>
+            {% endif %}
         </ul>
       </div>
     </div>
