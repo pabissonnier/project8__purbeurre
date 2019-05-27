@@ -6,7 +6,7 @@ from django.template import loader
 from .database_manager import Database_manager
 from django.core.paginator import Paginator
 
-from .models import Product, UserList
+from .models import Product
 
 
 def index(request):
@@ -27,7 +27,7 @@ def search(request):
         'products': products,
         'title': title,
     }
-    return HttpResponse(render(request, 'answer/search.html', context))
+    return render(request, 'answer/search.html', context)
 
 
 def app(request):
@@ -55,18 +55,19 @@ def app(request):
         'products': products,
         'better_products': better_products,
     }
-    return HttpResponse(render(request, 'answer/results.html', context))
+    return render(request, 'answer/results.html', context)
 
 
 def detail(request, product_id):
     """ Display details for the product clicked"""
-    product = Product.objects.get(id=product_id)
+    product = Product.objects.get(pk=product_id)
     context = {
         'name': product.name,
         'picture': product.picture,
         'nutriscore': product.nutriscore,
         'ingredients': product.ingredients,
         'shops': product.shops,
-        'link': product.link
+        'link': product.link,
+        'album_id': product.id
     }
-    return HttpResponse(render(request, 'answer/detail.html', context))
+    return render(request, 'answer/detail.html', context)
