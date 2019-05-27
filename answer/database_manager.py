@@ -1,8 +1,20 @@
 # -*- coding: utf-8 -*-
 
 from answer.models import Product
+from difflib import SequenceMatcher
+
 
 class Database_manager:
+
+    def find_product_name(self, query):
+        products_ratio_list = []
+        products_list = Product.objects.all().values('name')
+        for element in products_list:
+            for key, value in element.items():
+                product_score = SequenceMatcher(None, query, value).ratio()
+                if product_score > 0.3:
+                    products_ratio_list.append(value)
+        return products_ratio_list
 
     def product_chosen(self, query):
         """ Display elements of the product chosen (name, picture, nutriscore)"""
@@ -12,6 +24,16 @@ class Database_manager:
         product_nutriscore = product.nutriscore
         product_category = product.category
         return product_name, product_picture, product_nutriscore, product_category
+
+    def get_same_names(self, product_name, product_category):
+        products_ratio_list = []
+        products_list = Product.objects.filter(category=product_category).values('name')
+        for element in products_list:
+            for key, value in element.items():
+                product_score = SequenceMatcher(None, product_name, value).ratio()
+                if product_score > 0.25:
+                    products_ratio_list.append(value)
+        return products_ratio_list
 
     def get_better_nutriscore(self, product_nutriscore):
         nutriscore_list = ['a', 'b', 'c', 'd', 'e']
@@ -26,8 +48,8 @@ class Database_manager:
             better_nutriscores_list.append(nutriscores_wanted)
         return better_nutriscores_list
 
-    def extract_products_for_replace(self, better_nutriscores_list, product_category):
+    def extract_products_for_replace(self, better_nutriscores_list, product_category, best_ratio_list):
         """ Takes products with same category and higher nutriscore"""
-
-        better_nutriscores_list = Product.objects.filter(category=product_category).filter(nutriscore__in= better_nutriscores_list)
+        better_nutriscores_list = Product.objects.filter(category=product_category).filter(name__in=best_ratio_list).\
+            filter(nutriscore__in=better_nutriscores_list)
         return better_nutriscores_list

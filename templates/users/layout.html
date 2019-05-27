@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  {%  load staticfiles %}
+  <link rel="icon" href="{% static 'answer/img/logo_pur_beurre-favicon.png'%}"/>
+
+  <title>Purbeurre - Trouvez un produit plus sain</title>
+
+  <!-- Font Awesome Icons -->
+  <link href="{% static 'answer/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  {% load static %}
+
+  <!-- Theme CSS - Includes Bootstrap -->
+  <link href="{% static 'answer/css/creative.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNavSec">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="/"><img id="logo" src="{% static 'answer/img/logo_pur_beurre.png'%}">Purbeurre</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <form  action="{% url 'search-products' %}" method="get" accept-charset="utf-8">
+              <input type="text" class="form-control form-control-sm" placeholder="Rechercher" id="searchform" name='query'>
+            </form>
+          </li>
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="{% url 'profile' %}" id="user-logo"><img src="{% static 'answer/img/user.png'%}" alt="Profil" title="Profil"> </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#favs" id="carrot-logo"><img src="{% static 'answer/img/carrot.png'%}" alt="Favoris" title="Favoris"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="{% url 'logout' %}" id="logout-logo"><img src="{% static 'answer/img/logout.png'%}" alt="Déconnection" title="Déconnection"></a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="{% url 'login' %}" id="user-logo"><img src="{% static 'answer/img/user.png'%}" alt="Connection" title="Connection"> </a>
+                </li>
+            {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success">
+      <div class="alert alert-{{ message.tags }}">
+      </div>
+        {{  message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+
+
+  {% block content %}{% endblock %}
+
+  <!-- Footer -->
+  <footer class="bg-light py-5">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 mr-auto text-center">
+                <a href="#" class="small text-center text-muted">Mentions légales</a>
+            </div>
+            <div class="col-lg-4 mr-auto text-center">
+                <a class="small text-center text-muted">Contact</a>
+            </div>
+            <div class="col-lg-4 mr-auto text-center">
+                <div class="small text-center text-muted">Copyright &copy; 2019 - Pierre-Antoine Bissonnier</div>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'answer/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'answer/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'answer/js/creative.min.js' %}"></script>
+
+</body>
+
+</html>

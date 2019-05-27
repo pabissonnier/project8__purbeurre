@@ -10568,9 +10568,32 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-.content-section {
+.content-section-logout {
+  height: auto;
   width: 50%;
-  margin-top: 100px;
+  padding-top: 300px;
+  padding-bottom: 400px;
+}
+
+.content-section-login {
+  height: auto;
+  width: 50%;
+  padding-top: 250px;
+  padding-bottom: 350px;
+}
+
+.content-section-profile {
+  height: auto;
+  width: 50%;
+  padding-top: 250px;
+  padding-bottom: 350px;
+}
+
+.content-section-register {
+  height: auto;
+  width: 70%;
+  padding-top: 200px;
+  padding-bottom: 300px;
 }
 
 #logo{
@@ -10688,6 +10711,77 @@ hr.light {
     color: #212529;
   }
   #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
+    color: #f4623a;
+  }
+}
+
+#mainNavSec {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+#mainNavSec .navbar-brand {
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  color: #212529;
+}
+
+#mainNavSec .navbar-nav .nav-item .nav-link {
+  color: #6c757d;
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.75rem 0;
+}
+
+#mainNavSec .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
+  color: #f4623a;
+}
+
+#mainNavSec .navbar-nav .nav-item .nav-link.active {
+  color: #f4623a !important;
+}
+
+@media (min-width: 992px) {
+  #mainNavSec {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  #mainNavSec .navbar-brand {
+    color: #212529;
+  }
+  #mainNavSec .navbar-brand:hover {
+    color: #f4623a;
+  }
+  #mainNavSec .navbar-nav .nav-item .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0 1rem;
+  }
+  #mainNavSec .navbar-nav .nav-item .nav-link:hover {
+    color: #fff;
+  }
+  #mainNavSec .navbar-nav .nav-item:last-child .nav-link {
+    padding-right: 0;
+  }
+  #mainNavSec.navbar-scrolled {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+  }
+  #mainNavSec.navbar-scrolled .navbar-brand {
+    color: #212529;
+  }
+  #mainNavSec.navbar-scrolled .navbar-brand:hover {
+    color: #f4623a;
+  }
+  #mainNavSec.navbar-scrolled .navbar-nav .nav-item .nav-link {
+    color: #212529;
+  }
+  #mainNavSec.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
     color: #f4623a;
   }
 }

@@ -32,30 +32,62 @@ def search(request):
 
 def app(request):
     query = request.GET.get('app-query')
-    if not query:
-        products_list = Product.objects.all()
-        paginator = Paginator(products_list, 5)
-        page = request.Get.get('page')
-        products = paginator.page(page)
-    else:
-        products = Product.objects.filter(name__icontains=query)
-        if not products.exists():
-            products = Product.objects.all() # remplacer par template contenant les produits qui peuvent s'apparenter
-
     products_datas = Database_manager()
-    product_name, product_picture, product_nutriscore, product_category = Database_manager.product_chosen(products_datas, query)
-    better_nutriscore = Database_manager.get_better_nutriscore(products_datas, product_nutriscore)
-    better_products = Database_manager.extract_products_for_replace(products_datas, better_nutriscore, product_category)
-    title = "Voici de meilleurs produits pour remplacer : '%s'" % query
-    context = {
-        'title': title,
-        'name': product_name,
-        'picture': product_picture,
-        'nutriscore': product_nutriscore,
-        'products': products,
-        'better_products': better_products,
-    }
-    return render(request, 'answer/results.html', context)
+    if not query:
+        products_list = Product.objects.all().order_by('name')
+        title = "Aucun produit n'a été renseigné, choisissez dans la liste de produits ou recherchez un produit"
+        context = {
+            'title': title,
+            'products_list': products_list,
+        }
+        return render(request, 'answer/results.html', context)
+    else:
+        products = Product.objects.filter(name=query)
+        if not products.exists():
+            products_names = Database_manager.find_product_name(products_datas, query)
+            title = "Aucun produit pour : '%s', choisissez un produit dans la liste ci-dessous" % query
+            context = {
+                'title': title,
+                'products_names': products_names,
+            }
+            return render(request, 'answer/list.html', context)
+
+        product_name, product_picture, product_nutriscore, product_category = Database_manager.product_chosen(products_datas, query)
+        better_nutriscore = Database_manager.get_better_nutriscore(products_datas, product_nutriscore)
+        best_ratio_list = Database_manager.get_same_names(products_datas, product_name, product_category)
+        better_products = Database_manager.extract_products_for_replace(products_datas, better_nutriscore, product_category,
+                                                                        best_ratio_list)
+        title = "Voici de meilleurs produits pour remplacer : '%s'" % query
+        context = {
+            'title': title,
+            'name': product_name,
+            'picture': product_picture,
+            'nutriscore': product_nutriscore,
+            'better_products': better_products,
+        }
+        return render(request, 'answer/results.html', context)
+
+
+def app_link(request, product_name):
+    products_datas = Database_manager()
+    product_dict = Product.objects.filter(name=product_name)
+    for key, value in product_dict:
+        product = value['product_name']
+        product_name, product_picture, product_nutriscore, product_category = Database_manager.product_chosen(
+            products_datas, product)
+        better_nutriscore = Database_manager.get_better_nutriscore(products_datas, product_nutriscore)
+        best_ratio_list = Database_manager.get_same_names(products_datas, product_name, product_category)
+        better_products = Database_manager.extract_products_for_replace(products_datas, better_nutriscore, product_category,
+                                                                        best_ratio_list)
+        title = "Voici de meilleurs produits pour remplacer : '%s'" % product_name
+        context = {
+            'title': title,
+            'name': product_name,
+            'picture': product_picture,
+            'nutriscore': product_nutriscore,
+            'better_products': better_products,
+        }
+        return render(request, 'answer/results.html', context)
 
 
 def detail(request, product_id):
