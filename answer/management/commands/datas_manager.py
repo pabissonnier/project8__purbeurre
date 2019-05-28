@@ -20,7 +20,7 @@ class DatasManager:
 
         categories_list = []
         for value in categories_data["tags"]:
-            if value["products"] > 31132:
+            if value["products"] > 2000:
                 categories_values = value["name"]
                 categories_list.append(categories_values)
         return categories_list
@@ -114,11 +114,17 @@ class DatasManager:
                         product_shops_db = value
                     elif key == "link":
                         product_link_db = value
-                insertion_datas = Product(name= product_name_db, category=product_category_db,
-                                         ingredients=product_ingredients_db, nutriscore=product_nutriscore_db,
-                                           picture=product_picture_db, shops=product_shops_db, link = product_link_db)
-                insertion_datas.save()
-
+                if product_link_db and product_shops_db and product_picture_db and product_nutriscore_db and product_ingredients_db and product_category_db and product_name_db:
+                    insertion_datas = Product(name= product_name_db, category=product_category_db,
+                                             ingredients=product_ingredients_db, nutriscore=product_nutriscore_db,
+                                               picture=product_picture_db, shops=product_shops_db, link = product_link_db)
+                    data_inside = Product.objects.filter(link=product_link_db)
+                    if not data_inside:
+                        insertion_datas.save()
+                    else:
+                        pass
+                else:
+                    pass
 
     def get_datas_from_list(self, list):
         pass

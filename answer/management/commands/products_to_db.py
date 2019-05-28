@@ -16,9 +16,6 @@ class Command(BaseCommand):
         categories_list = DatasManager.categories_extract(datas_from_api)
         categories_url_name = DatasManager.category_to_url(datas_from_api, categories_list)
         products_extract = DatasManager.products_extract(datas_from_api, categories_url_name)
-        try:
-            DatasManager.get_products_datas(datas_from_api, products_extract)
-        except IntegrityError:
-            pass
-        finally:
-            DatasManager.get_products_datas(datas_from_api, products_extract)
+        DatasManager.get_products_datas(datas_from_api, products_extract)
+
+
