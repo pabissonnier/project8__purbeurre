@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from answer.models import Product
+from users.models import User, UserList
+
 from difflib import SequenceMatcher
 
 
@@ -16,12 +18,23 @@ class Database_manager:
                     products_ratio_list.append(value)
         return products_ratio_list
 
+    def query_in_name(self, query):
+        product_query_name = []
+        products_list = Product.objects.all().values('name').order_by('name')
+        for element in products_list:
+            for key, value in element.items():
+                if query in value:
+                    product_query_name.append(value)
+        return product_query_name
+
     def multiple_product_name(self, query):
+        """ If many products with similar name """
         products_same_name = []
         products_list = Product.objects.get(name=query)
         pass
 
     def product_name_to_url(self, product_list):
+        """ Convert product name to querystyle """
         product_url_list = []
         for product in product_list:
             product_url_dict = {}
@@ -41,6 +54,7 @@ class Database_manager:
         return product_name, product_picture, product_nutriscore, product_category
 
     def get_same_names(self, product_name, product_category):
+        """ Get similar product names """
         products_ratio_list = []
         products_list = Product.objects.filter(category=product_category).values('name')
         for element in products_list:
@@ -51,6 +65,7 @@ class Database_manager:
         return products_ratio_list
 
     def get_better_nutriscore(self, product_nutriscore):
+        """ Gets better nutriscore, if 'c' = 'a', 'b', if doesn't exist higher, take the same NC"""
         nutriscore_list = ['a', 'b', 'c', 'd', 'e']
         better_nutriscores_list = []
         if product_nutriscore in nutriscore_list:
@@ -68,3 +83,7 @@ class Database_manager:
         better_nutriscores_list = Product.objects.filter(category=product_category).filter(name__in=best_ratio_list).\
             filter(nutriscore__in=better_nutriscores_list)
         return better_nutriscores_list
+
+    def product_to_userlist(self):
+        """ To put the product into the userlist table"""
+        pass

@@ -10,7 +10,7 @@ from answer import views as answer_views
 urlpatterns = [
     url(r'^$', answer_views.index, name='home'),
     url(r'^answer/', answer_views.app, name='application'),
-    url(r'^answer/?app-query=<product_url_name>', answer_views.app_link, name='application_link'),
+    url(r'^answer/?app-query=(?P<product_url_name>.+)/$', answer_views.app_link, name='application_link'),
     url(r'^(?P<product_id>[0-9]+)/$', answer_views.detail, name='detail'),
     url(r'^search/$', answer_views.search, name='search-products'),
     url(r'^admin/', admin.site.urls),
@@ -18,7 +18,7 @@ urlpatterns = [
     url(r'^login/', auth_views.LoginView.as_view(template_name = 'users/login.html'), name='login'),
     url(r'^logout/', auth_views.LogoutView.as_view(template_name = 'users/logout.html'), name='logout'),
     url(r'^profile/', user_views.profile, name='profile'),
-
+    url(r'^favs/', user_views.favs, name='favs'),
 ]
 
 

@@ -38,6 +38,7 @@ def search(request):
         context = {
             'products': products,
             'title': title,
+            'query': query
         }
         return render(request, 'answer/search.html', context)
 
@@ -57,14 +58,25 @@ def app(request):
         try:
             products = Product.objects.filter(name=query)
             if not products.exists():
-                products_names = Database_manager.find_product_name(products_datas, query)
-                url_names_dict = Database_manager.product_name_to_url(products_datas, products_names)
-                title = "Aucun produit pour : '%s', choisissez un produit dans la liste ci-dessous" % query
-                context = {
-                    'title': title,
-                    'products_url_and_names': url_names_dict,
-                }
-                return render(request, 'answer/list.html', context)
+                space = ' '
+                if space in query:
+                    products_names = Database_manager.find_product_name(products_datas, query)
+                    url_names_dict = Database_manager.product_name_to_url(products_datas, products_names)
+                    title = "Aucun produit pour : '%s', choisissez un produit dans la liste ci-dessous" % query
+                    context = {
+                        'title': title,
+                        'products_url_and_names': url_names_dict,
+                    }
+                    return render(request, 'answer/list.html', context)
+                else:
+                    products_names = Database_manager.query_in_name(products_datas, query)
+                    url_names_dict = Database_manager.product_name_to_url(products_datas, products_names)
+                    title = "Plusieurs produits contiennent : '%s', choisissez un produit dans la liste ci-dessous" % query
+                    context = {
+                        'title': title,
+                        'products_url_and_names': url_names_dict,
+                    }
+                    return render(request, 'answer/list.html', context)
 
             product_name, product_picture, product_nutriscore, product_category = Database_manager.product_chosen(products_datas, query)
             better_nutriscore = Database_manager.get_better_nutriscore(products_datas, product_nutriscore)
