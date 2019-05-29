@@ -12,13 +12,28 @@ class Database_manager:
         for element in products_list:
             for key, value in element.items():
                 product_score = SequenceMatcher(None, query, value).ratio()
-                if product_score > 0.3:
+                if product_score > 0.5:
                     products_ratio_list.append(value)
         return products_ratio_list
 
+    def multiple_product_name(self, query):
+        products_same_name = []
+        products_list = Product.objects.get(name=query)
+        pass
+
+    def product_name_to_url(self, product_list):
+        product_url_list = []
+        for product in product_list:
+            product_url_dict = {}
+            product_name_url = product.replace("'", '%27')
+            product_name_url = product_name_url.replace(' ', '+')
+            product_url_dict[product] = product_name_url
+            product_url_list.append(product_url_dict)
+        return product_url_list
+
     def product_chosen(self, query):
         """ Display elements of the product chosen (name, picture, nutriscore)"""
-        product = Product.objects.get(name__icontains=query)
+        product = Product.objects.get(name=query)
         product_name = product.name
         product_picture = product.picture
         product_nutriscore = product.nutriscore
@@ -31,7 +46,7 @@ class Database_manager:
         for element in products_list:
             for key, value in element.items():
                 product_score = SequenceMatcher(None, product_name, value).ratio()
-                if product_score > 0.25:
+                if product_score > 0.5:
                     products_ratio_list.append(value)
         return products_ratio_list
 
@@ -39,7 +54,7 @@ class Database_manager:
         nutriscore_list = ['a', 'b', 'c', 'd', 'e']
         better_nutriscores_list = []
         if product_nutriscore in nutriscore_list:
-            nutriscore_position = nutriscore_list.index(product_nutriscore)
+            nutriscore_position = nutriscore_list.index(product_nutriscore) + 1
             nutriscores_wanted = nutriscore_list[:nutriscore_position]
             for elements in nutriscores_wanted:
                 better_nutriscores_list.append(elements)

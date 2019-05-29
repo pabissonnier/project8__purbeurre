@@ -18,7 +18,7 @@
             <a href="{% url 'detail' product_id=product.id %}">
                 <img class="img-thumbnail" src="{{ product.picture }}" alt="{{ product.name }}">
             </a>
-            <h3><a href="/">{{ product.name }}</a></h3>
+            <h3><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h3>
         </div>
         {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
     {% endfor %}
@@ -27,7 +27,7 @@
             <a href="{% url 'detail' product_id=product.id %}">
                 <img class="img-thumbnail" src="{{ product.picture }}" alt="{{ product.name }}">
             </a>
-            <h3><a href="/">{{ product.name }}</a></h3>
+            <h3><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h3>
         </div>
         {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
     {% endfor %}

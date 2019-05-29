@@ -14,9 +14,12 @@
   </header>
   <div class="row h-250 align-items-left justify-content-center text-center">
     <ul>
-      {% for name in products_names %}
-            <li><a href="{% url 'application_link' product_name=name %}">{{ name }}</a></li>
-      {% endfor %}
+        {% for dict in products_url_and_names %}
+          {% for name, url_name in dict.items %}
+                <li><a href="{% url 'application_link' product_url_name=url_name %}">{{ name }}</a></li>
+          {% endfor %}
+        {% endfor %}
+        {{ element }}
     </ul>
   </div>
 {% endblock %}
