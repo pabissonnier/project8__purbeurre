@@ -21,11 +21,12 @@
             </a>
             <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
             <h3><a href="#">{{ product.name }}</a></h3>
-            {% if user.is_authenticated %}
+
+              {% if user.is_authenticated %}
                 <form method="get">
                     <button name="fav-btn" type="submit" value="{{ product }}">Ajouter aux favoris</button>
                 </form>
-            {% endif %}
+              {% endif %}
           </div>
         </div>
         {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
@@ -38,6 +39,7 @@
                 </a>
                 <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
                 <h3><a href="#">{{ product.name }}</a></h3>
+
                 {% if user.is_authenticated %}
                     <form method="get">
                         <button name="fav-btn" type="submit" value="{{ product }}">Ajouter aux favoris</button>

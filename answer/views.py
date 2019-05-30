@@ -18,7 +18,7 @@ def search(request):
     global message
     if not query:
         products_all_list = Product.objects.all()
-        paginator = Paginator(products_all_list, 10)
+        paginator = Paginator(products_all_list, 9)
         page = request.GET.get('page')
         products_all = paginator.get_page(page)
         title = "Résultats pour la recherche : '%s'" % query
@@ -29,7 +29,7 @@ def search(request):
         return render(request, 'answer/search.html', context)
     else:
         products_list = Product.objects.filter(name__icontains=query)
-        paginator = Paginator(products_list, 10)
+        paginator = Paginator(products_list, 9)
         page = request.GET.get('page')
         products = paginator.get_page(page)
         if not products_list.exists():
