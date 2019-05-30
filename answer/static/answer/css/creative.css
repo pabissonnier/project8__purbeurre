@@ -605,6 +605,32 @@ pre code {
   margin-left: -15px;
 }
 
+.result-display {
+  padding-bottom: 100px;
+}
+
+.product_pic {
+  position: relative;
+  border-width: 1px;
+  border-color: #C45525;
+  width: 300px;
+  height: 400px;
+  display: inline-block;
+}
+
+.nc_round {
+  position: relative;
+  top: -420px;
+  right: -150px;
+  background-image: url("../img/circle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  height: 70px;
+  text-align: center;
+  padding-top: 15px;
+}
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
