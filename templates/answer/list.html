@@ -16,7 +16,10 @@
     <ul>
         {% for dict in products_url_and_names %}
           {% for name, url_name in dict.items %}
-                <li><a href="{% url 'application_link' product_url_name=url_name %}">{{ name }}</a></li>
+              <a href="#">{{ name }}</a>
+              <form action="{% url 'application' %}" method="get" accept-charset="utf-8">
+                <button name="app-query" type="submit" value="{{ name }}">chercher</button>
+              </form>
           {% endfor %}
         {% endfor %}
         {{ element }}

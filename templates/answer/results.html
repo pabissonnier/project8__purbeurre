@@ -15,19 +15,19 @@
   <div class="row h-250 align-items-center justify-content-center text-center">
     {% for product in products_list %}
         <div class="col-sm-4 text center">
-            <a href="{% url 'detail' product_id=product.id %}">
+            <a href="#">
                 <img class="img-thumbnail" src="{{ product.picture }}" alt="{{ product.name }}">
             </a>
-            <h3><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h3>
+            <h3><a href="#">{{ product.name }}</a></h3>
         </div>
         {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
     {% endfor %}
     {% for product in better_products %}
         <div class="col-sm-4 text center">
-            <a href="{% url 'detail' product_id=product.id %}">
+            <a href="#">
                 <img class="img-thumbnail" src="{{ product.picture }}" alt="{{ product.name }}">
             </a>
-            <h3><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h3>
+            <h3><a href="#">{{ product.name }}</a></h3>
         </div>
         {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
     {% endfor %}
