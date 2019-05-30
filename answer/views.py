@@ -78,11 +78,11 @@ def app(request):
                     }
                     return render(request, 'answer/list.html', context)
 
-            product_name, product_picture, product_nutriscore, product_category = Database_manager.product_chosen(products_datas, query)
+            product_name, product_picture, product_nutriscore, product_category, product_link = Database_manager.product_chosen(products_datas, query)
             better_nutriscore = Database_manager.get_better_nutriscore(products_datas, product_nutriscore)
             best_ratio_list = Database_manager.get_same_names(products_datas, product_name, product_category)
             better_products = Database_manager.extract_products_for_replace(products_datas, better_nutriscore, product_category,
-                                                                            best_ratio_list)
+                                                                            best_ratio_list, product_link)
             title = "Voici de meilleurs produits pour remplacer : '%s'" % query
             context = {
                 'title': title,

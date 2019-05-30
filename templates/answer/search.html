@@ -38,10 +38,14 @@
             </a>
             <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
             <h3><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h3>
+            <form action="{% url 'application' %}" method="get" accept-charset="utf-8">
+              <button name="app-query" type="submit" value="{{ product.name }}">chercher</button>
+            </form>
           </div>
         </div>
         {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
     {% endfor %}
+
   <div class="pagination">
   <span class="step-links">
         {% if products_all.has_previous %}

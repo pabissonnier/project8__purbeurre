@@ -51,7 +51,8 @@ class Database_manager:
         product_picture = product.picture
         product_nutriscore = product.nutriscore
         product_category = product.category
-        return product_name, product_picture, product_nutriscore, product_category
+        product_link = product.link
+        return product_name, product_picture, product_nutriscore, product_category, product_link
 
     def get_same_names(self, product_name, product_category):
         """ Get similar product names """
@@ -78,10 +79,10 @@ class Database_manager:
             better_nutriscores_list.append(nutriscores_wanted)
         return better_nutriscores_list
 
-    def extract_products_for_replace(self, better_nutriscores_list, product_category, best_ratio_list):
+    def extract_products_for_replace(self, better_nutriscores_list, product_category, best_ratio_list, product_link):
         """ Takes products with same category and higher nutriscore"""
         better_nutriscores_list = Product.objects.filter(category=product_category).filter(name__in=best_ratio_list).\
-            filter(nutriscore__in=better_nutriscores_list)
+            filter(nutriscore__in=better_nutriscores_list).exclude(link=product_link)
         return better_nutriscores_list
 
     def product_to_userlist(self, query):
