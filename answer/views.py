@@ -2,7 +2,7 @@
 
 from django.shortcuts import render
 from django.core.exceptions import MultipleObjectsReturned
-from django.template import loader
+from django.contrib.auth.decorators import login_required
 from .database_manager import Database_manager
 from django.core.paginator import Paginator
 
@@ -115,3 +115,6 @@ def detail(request, product_id):
         'album_id': product.id
     }
     return render(request, 'answer/detail.html', context)
+
+
+

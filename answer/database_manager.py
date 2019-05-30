@@ -84,6 +84,23 @@ class Database_manager:
             filter(nutriscore__in=better_nutriscores_list)
         return better_nutriscores_list
 
-    def product_to_userlist(self):
+    def product_to_userlist(self, query):
         """ To put the product into the userlist table"""
-        pass
+        product = Product.objects.get(query)
+        product_name = product.name
+        product_picture = product.picture
+        product_nutriscore = product.nutriscore
+        product_category = product.category
+        product_shops = product.shops
+        product_ingredients = product.ingredients
+        product_link = product.link
+        insertion_datas = UserList(name=product_name, category=product_category,
+                                  ingredients=product_ingredients, nutriscore=product_nutriscore,
+                                  picture=product_picture, shops=product_shops, link=product_link)
+        data_inside = UserList.objects.filter(link=product_link)
+        if not data_inside:
+            insertion_datas.save()
+        else:
+            pass
+
+

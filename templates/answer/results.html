@@ -19,6 +19,11 @@
                 <img class="img-thumbnail" src="{{ product.picture }}" alt="{{ product.name }}">
             </a>
             <h3><a href="#">{{ product.name }}</a></h3>
+            {% if user.is_authenticated %}
+                <form method="get">
+                    <button name="fav-btn" type="submit" value="{{ product }}">Ajouter aux favoris</button>
+                </form>
+            {% endif %}
         </div>
         {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
     {% endfor %}
@@ -28,6 +33,11 @@
                 <img class="img-thumbnail" src="{{ product.picture }}" alt="{{ product.name }}">
             </a>
             <h3><a href="#">{{ product.name }}</a></h3>
+            {% if user.is_authenticated %}
+                <form method="get">
+                    <button name="fav-btn" type="submit" value="{{ product }}">Ajouter aux favoris</button>
+                </form>
+            {%  endif %}
         </div>
         {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
     {% endfor %}
