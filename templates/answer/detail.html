@@ -19,6 +19,9 @@
         <h5>{{ ingredients }}</h5>
         <h5>{{ shops }}</h5>
         <h5>{{ link }}</h5>
+        <form action="{% url 'application' %}" method="get" accept-charset="utf-8">
+            <button name="app-query" type="submit" value="{{ name }}">remplacer</button>
+        </form>
     </div>
   </div>
 {% endblock %}

@@ -102,28 +102,6 @@ def app(request):
             return render(request, 'answer/list.html', context)
 
 
-def app_link(request, product_name):
-    products_datas = Database_manager()
-    product_dict = Product.objects.filter(name=product_name)
-    for key, value in product_dict:
-        product = value['product_name']
-        product_name, product_picture, product_nutriscore, product_category = Database_manager.product_chosen(
-            products_datas, product)
-        better_nutriscore = Database_manager.get_better_nutriscore(products_datas, product_nutriscore)
-        best_ratio_list = Database_manager.get_same_names(products_datas, product_name, product_category)
-        better_products = Database_manager.extract_products_for_replace(products_datas, better_nutriscore, product_category,
-                                                                        best_ratio_list)
-        title = "Voici de meilleurs produits pour remplacer : '%s'" % product_name
-        context = {
-            'title': title,
-            'name': product_name,
-            'picture': product_picture,
-            'nutriscore': product_nutriscore,
-            'better_products': better_products,
-        }
-        return render(request, 'answer/results.html', context)
-
-
 def detail(request, product_id):
     """ Display details for the product clicked"""
     product = Product.objects.get(pk=product_id)
