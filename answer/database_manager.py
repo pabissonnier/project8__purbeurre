@@ -8,7 +8,8 @@ from difflib import SequenceMatcher
 
 class Database_manager:
 
-    def find_product_name(self, query):
+    def find_similar_name(self, query):
+        """ If app-query doesn't exist and is more than one string, find similar product names in the db"""
         products_ratio_list = []
         products_list = Product.objects.all().values('name')
         for element in products_list:
@@ -18,31 +19,11 @@ class Database_manager:
                     products_ratio_list.append(value)
         return products_ratio_list
 
-    def query_in_name(self, query):
-        product_query_name = []
-        products_list = Product.objects.all().values('name').order_by('name')
-        for element in products_list:
-            for key, value in element.items():
-                if query in value:
-                    product_query_name.append(value)
-        return product_query_name
-
     def multiple_product_name(self, query):
         """ If many products with similar name """
         products_same_name = []
         products_list = Product.objects.get(name=query)
         pass
-
-    def product_name_to_url(self, product_list):
-        """ Convert product name to querystyle """
-        product_url_list = []
-        for product in product_list:
-            product_url_dict = {}
-            product_name_url = product.replace("'", '%27')
-            product_name_url = product_name_url.replace(' ', '+')
-            product_url_dict[product] = product_name_url
-            product_url_list.append(product_url_dict)
-        return product_url_list
 
     def product_chosen(self, query):
         """ Display elements of the product chosen (name, picture, nutriscore)"""

@@ -13,16 +13,21 @@
     </div>
   </header>
   <div class="row h-250 align-items-left justify-content-center text-center">
-    <ul>
-        {% for dict in products_url_and_names %}
-          {% for name, url_name in dict.items %}
-              <a href="#">{{ name }}</a>
-              <form action="{% url 'application' %}" method="get" accept-charset="utf-8">
-                <button name="app-query" type="submit" value="{{ name }}">chercher</button>
-              </form>
-          {% endfor %}
+        {% for product in products %}
+            <div class="col-sm-4 text center">
+                <div class="result-display">
+                    <a href="{% url 'detail' product_id=product.id %}">
+                        <div class="product_pic"><img class="img-thumbnail" src="{{ product.picture }}" alt="{{ product.name }}"></div>
+                    </a>
+                    <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
+                    <h3><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h3>
+
+                    <form action="{% url 'application' %}" method="get" accept-charset="utf-8">
+                        <button name="app-query" type="submit" value="{{ product.name }}">chercher</button>
+                    </form>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
         {% endfor %}
-        {{ element }}
-    </ul>
   </div>
 {% endblock %}

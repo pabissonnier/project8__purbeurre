@@ -2,9 +2,10 @@
 
 from django.shortcuts import render
 from django.core.exceptions import MultipleObjectsReturned
-from django.contrib.auth.decorators import login_required
 from .database_manager import Database_manager
 from django.core.paginator import Paginator
+from difflib import SequenceMatcher
+
 
 from .models import Product
 
@@ -60,21 +61,20 @@ def app(request):
             if not products.exists():
                 space = ' '
                 if space in query:
-                    products_names = Database_manager.find_product_name(products_datas, query)
-                    url_names_dict = Database_manager.product_name_to_url(products_datas, products_names)
+                    products_ratio_list = Database_manager.find_similar_name(products_datas, query)
+                    products = Product.objects.filter(name__in=products_ratio_list).order_by('name')
                     title = "Aucun produit pour : '%s', choisissez un produit dans la liste ci-dessous" % query
                     context = {
                         'title': title,
-                        'products_url_and_names': url_names_dict,
+                        'products': products,
                     }
                     return render(request, 'answer/list.html', context)
                 else:
-                    products_names = Database_manager.query_in_name(products_datas, query)
-                    url_names_dict = Database_manager.product_name_to_url(products_datas, products_names)
+                    products = Product.objects.filter(name__icontains=query).order_by('name')
                     title = "Plusieurs produits contiennent : '%s', choisissez un produit dans la liste ci-dessous" % query
                     context = {
                         'title': title,
-                        'products_url_and_names': url_names_dict,
+                        'products': products,
                     }
                     return render(request, 'answer/list.html', context)
 
@@ -112,7 +112,6 @@ def detail(request, product_id):
         'ingredients': product.ingredients,
         'shops': product.shops,
         'link': product.link,
-        'album_id': product.id
     }
     return render(request, 'answer/detail.html', context)
 
