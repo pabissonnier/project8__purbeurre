@@ -4,8 +4,6 @@ from .forms import UserRegisterForm
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
 
-from answer.database_manager import Database_manager
-from .models import User
 from answer.models import Product
 
 
@@ -30,7 +28,13 @@ def profile(request):
 def favs(request):
     """ Add product to user list"""
     product = get_object_or_404(Product, id=request.POST.get('fav-btn'))
-    product.favorites.add(request.user)
+    is_liked = False
+    if product.favorites.filter(id=request.user.id).exists():
+        product.favorites.remove(request.user)
+        is_liked = False
+    else:
+        product.favorites.add(request.user)
+        is_liked = True
     return HttpResponseRedirect(product.get_absolute_url())
 
 @login_required()

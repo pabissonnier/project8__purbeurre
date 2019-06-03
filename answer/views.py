@@ -48,11 +48,6 @@ def search(request):
 def app(request):
     query = request.GET.get('app-query')
     products_datas = Database_manager()
-    """is_favorite = False
-    product = get_object_or_404(Product, id=id)
-
-    if product.favorites.filter(id=request.user.id).exists():
-        is_favorite = True"""
 
     if not query:
         products_list = Product.objects.all().order_by('name')
@@ -65,6 +60,7 @@ def app(request):
     else:
         try:
             products = Product.objects.filter(name=query)
+
             if not products.exists():
                 space = ' '
                 if space in query:

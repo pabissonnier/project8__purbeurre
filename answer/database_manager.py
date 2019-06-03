@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from answer.models import Product
-from users.models import User
-
 from difflib import SequenceMatcher
 
 

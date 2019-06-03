@@ -43,7 +43,11 @@
                 {% if user.is_authenticated %}
                     <form action='{%  url 'favorite_product' %}' method="post">
                         {%  csrf_token %}
-                        <button name="fav-btn" type="submit" value="{{ product.id }}" class="btn btn-primary">Ajouter aux favoris</button>
+                        {%  if is_liked %}
+                          <button name="fav-btn" type="submit" value="{{ product.id }}" class="btn btn-primary">Retirer des favoris</button>
+                        {%  else %}
+                          <button name="fav-btn" type="submit" value="{{ product.id }}" class="btn btn-primary">Ajouter aux favoris</button>
+                        {%  endif %}
                     </form>
                 {%  endif %}
             </div>
