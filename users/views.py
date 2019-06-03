@@ -31,18 +31,14 @@ def favs(request):
     """ Add product to user list"""
     product = get_object_or_404(Product, id=request.POST.get('fav-btn'))
     product.favorites.add(request.user)
-    return HttpResponseRedirect("")
+    return HttpResponseRedirect(product.get_absolute_url())
 
-    """product = get_object_or_404(Product, id=id)
-    if product.favorites.filter(id=request.user.id).exists():
-        product.favorites.remove(request.user)
-    else:
-        product.favorites.add(request.user)
-    return HttpResponseRedirect("")"""
-
-
-
-    """product = request.GET['fav-btn']
-    products_datas = Database_manager()
-    Database_manager.product_to_userlist(products_datas, product)"""
-
+@login_required()
+def show_favs(request):
+    products_list = Product.objects.filter(favorites=request.user).order_by('name')
+    title = "Voici vos favoris"
+    context = {
+        'products_list': products_list,
+        'title': title,
+    }
+    return render(request, 'users/favs.html', context)
