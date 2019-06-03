@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Product(models.Model):
@@ -11,6 +12,7 @@ class Product(models.Model):
     shops = models.CharField(max_length=1000, null=True)
     link = models.CharField(max_length=1000, null=True, unique=True)
     picture = models.URLField()
+    favorites = models.ManyToManyField(User, related_name='favorite', blank=True)
 
     def __str__(self):
         return self.name

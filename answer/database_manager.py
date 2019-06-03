@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from answer.models import Product
-from users.models import User, UserList
+from users.models import User
 
 from difflib import SequenceMatcher
 
@@ -28,12 +28,7 @@ class Database_manager:
     def product_chosen(self, query):
         """ Display elements of the product chosen (name, picture, nutriscore)"""
         product = Product.objects.get(name=query)
-        product_name = product.name
-        product_picture = product.picture
-        product_nutriscore = product.nutriscore
-        product_category = product.category
-        product_link = product.link
-        return product_name, product_picture, product_nutriscore, product_category, product_link
+        return product.name, product.picture, product.nutriscore, product.category, product.link
 
     def get_same_names(self, product_name, product_category):
         """ Get similar product names """
@@ -66,20 +61,12 @@ class Database_manager:
             filter(nutriscore__in=better_nutriscores_list).exclude(link=product_link)
         return better_nutriscores_list
 
-    def product_to_userlist(self, query):
+    def product_to_userlist(self, product):
         """ To put the product into the userlist table"""
-        product = Product.objects.get(query)
-        product_name = product.name
-        product_picture = product.picture
-        product_nutriscore = product.nutriscore
-        product_category = product.category
-        product_shops = product.shops
-        product_ingredients = product.ingredients
-        product_link = product.link
-        insertion_datas = UserList(name=product_name, category=product_category,
-                                  ingredients=product_ingredients, nutriscore=product_nutriscore,
-                                  picture=product_picture, shops=product_shops, link=product_link)
-        data_inside = UserList.objects.filter(link=product_link)
+        insertion_datas = Product(name=product.name, category=product.category,
+                                  ingredients=product.ingredients, nutriscore=product.nutriscore,
+                                  picture=product.picture, shops=product.shops, link=product.link)
+        data_inside = Product.objects.get(link=product.link)
         if not data_inside:
             insertion_datas.save()
         else:

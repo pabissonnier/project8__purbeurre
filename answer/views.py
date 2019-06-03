@@ -5,6 +5,7 @@ from django.core.exceptions import MultipleObjectsReturned
 from .database_manager import Database_manager
 from django.core.paginator import Paginator
 from difflib import SequenceMatcher
+from django.shortcuts import get_object_or_404
 
 
 from .models import Product
@@ -47,6 +48,12 @@ def search(request):
 def app(request):
     query = request.GET.get('app-query')
     products_datas = Database_manager()
+    """is_favorite = False
+    product = get_object_or_404(Product, id=id)
+
+    if product.favorites.filter(id=request.user.id).exists():
+        is_favorite = True"""
+
     if not query:
         products_list = Product.objects.all().order_by('name')
         title = "Aucun produit n'a été renseigné, choisissez dans la liste de produits ou recherchez un produit"

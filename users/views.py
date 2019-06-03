@@ -1,10 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages
 from .forms import UserRegisterForm
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import get_object_or_404
 
 from answer.database_manager import Database_manager
-from .models import UserList, User
+from .models import User
 from answer.models import Product
 
 
@@ -28,7 +29,20 @@ def profile(request):
 @login_required()
 def favs(request):
     """ Add product to user list"""
-    if request.method == 'POST':
-        query = request.POST.get('fav-btn')
-        products_datas = Database_manager()
-        Database_manager.product_to_userlist(products_datas, query)
+    product = get_object_or_404(Product, id=request.POST.get('fav-btn'))
+    product.favorites.add(request.user)
+    return HttpResponseRedirect("")
+
+    """product = get_object_or_404(Product, id=id)
+    if product.favorites.filter(id=request.user.id).exists():
+        product.favorites.remove(request.user)
+    else:
+        product.favorites.add(request.user)
+    return HttpResponseRedirect("")"""
+
+
+
+    """product = request.GET['fav-btn']
+    products_datas = Database_manager()
+    Database_manager.product_to_userlist(products_datas, product)"""
+

@@ -16,11 +16,11 @@
     {% for product in products_list %}
         <div class="col-sm-4 text center">
           <div class="result-display">
-            <a href="#">
+            <a href="{% url 'detail' product_id=product.id %}">
                 <div class="product_pic"><img class="img-thumbnail" src="{{ product.picture }}" alt="{{ product.name }}"></div>
             </a>
             <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
-            <h3><a href="#">{{ product.name }}</a></h3>
+            <h3><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h3>
 
               {% if user.is_authenticated %}
                 <form method="get">
@@ -34,15 +34,16 @@
     {% for product in better_products %}
         <div class="col-sm-4 text center">
             <div class="result-display">
-                <a href="#">
+                <a href="{% url 'detail' product_id=product.id %}">
                     <div class="product_pic"><img class="img-thumbnail" src="{{ product.picture }}" alt="{{ product.name }}"></div>
                 </a>
                 <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
-                <h3><a href="#">{{ product.name }}</a></h3>
+                <h3><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h3>
 
                 {% if user.is_authenticated %}
-                    <form method="get">
-                        <button name="fav-btn" type="submit" value="{{ product }}">Ajouter aux favoris</button>
+                    <form action='{%  url 'favorite_product' %}' method="post">
+                        {%  csrf_token %}
+                        <button name="fav-btn" type="submit" value="{{ product.id }}" class="btn btn-primary">Ajouter aux favoris</button>
                     </form>
                 {%  endif %}
             </div>
