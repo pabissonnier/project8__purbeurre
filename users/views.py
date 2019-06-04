@@ -42,7 +42,7 @@ def defavs(request):
     """ Remove product from user list"""
     product = get_object_or_404(Product, id=request.POST.get('defav-btn'))
     product.favorites.remove(request.user)
-    return render(request, 'users/favs.html')
+    return HttpResponseRedirect('/favs/')
 
 @login_required()
 def show_favs(request):
