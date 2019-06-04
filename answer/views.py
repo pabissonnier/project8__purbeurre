@@ -51,12 +51,15 @@ def app(request):
 
     if not query:
         products_list = Product.objects.all().order_by('name')
+        paginator = Paginator(products_list, 9)
+        page = request.GET.get('page')
+        products_all = paginator.get_page(page)
         title = "Aucun produit n'a été renseigné, choisissez dans la liste de produits ou recherchez un produit"
         context = {
             'title': title,
-            'products_list': products_list,
+            'products': products_all,
         }
-        return render(request, 'answer/results.html', context)
+        return render(request, 'answer/list.html', context)
     else:
         try:
             products = Product.objects.filter(name=query)

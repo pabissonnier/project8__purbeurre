@@ -13,25 +13,7 @@
     </div>
   </header>
   <div class="row h-250 align-items-center justify-content-center text-center">
-    {% for product in products_list %}
-        <div class="col-sm-4 text center">
-          <div class="result-display">
-            <a href="{% url 'detail' product_id=product.id %}">
-                <div class="product_pic"><img class="img-thumbnail" src="{{ product.picture }}" alt="{{ product.name }}"></div>
-            </a>
-            <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
-            <h3><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h3>
-
-              {% if user.is_authenticated %}
-                <form method="get">
-                    <button name="fav-btn" type="submit" value="{{ product }}">Ajouter aux favoris</button>
-                </form>
-              {% endif %}
-          </div>
-        </div>
-        {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
-    {% endfor %}
-    {% for product in better_products %}
+   {% for product in better_products %}
         <div class="col-sm-4 text center">
             <div class="result-display">
                 <a href="{% url 'detail' product_id=product.id %}">
