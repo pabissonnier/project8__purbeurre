@@ -81,7 +81,15 @@ def app(request):
                     }
                     return render(request, 'answer/list.html', context)
 
-            product_name, product_picture, product_nutriscore, product_category, product_link = Database_manager.product_chosen(products_datas, query)
+            product_name, product_picture, product_nutriscore, product_category, product_link, product_id = \
+                Database_manager.product_chosen(products_datas, query)
+
+            product = get_object_or_404(Product, id=product_id)
+            is_liked = False
+            if product.favorites.filter(id=request.user.id).exists():
+                    """product.favorites.remove(request.user)"""
+                    is_liked = True
+
             better_nutriscore = Database_manager.get_better_nutriscore(products_datas, product_nutriscore)
             best_ratio_list = Database_manager.get_same_names(products_datas, product_name, product_category)
             better_products = Database_manager.extract_products_for_replace(products_datas, better_nutriscore, product_category,
@@ -93,6 +101,7 @@ def app(request):
                 'picture': product_picture,
                 'nutriscore': product_nutriscore,
                 'better_products': better_products,
+                'is_liked': is_liked,
             }
             return render(request, 'answer/results.html', context)
         except MultipleObjectsReturned:

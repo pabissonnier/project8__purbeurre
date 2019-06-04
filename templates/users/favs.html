@@ -17,6 +17,10 @@
                     </a>
                     <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
                     <h3><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h3>
+                    <form action='{%  url 'defavorite_product' %}' method="post">
+                        {%  csrf_token %}
+                        <button name="defav-btn" type="submit" value="{{ product.id }}" class="btn btn-primary">Retirer des favoris</button>
+                    </form>
                 </div>
             </div>
             {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}

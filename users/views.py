@@ -38,6 +38,13 @@ def favs(request):
     return HttpResponseRedirect(product.get_absolute_url())
 
 @login_required()
+def defavs(request):
+    """ Remove product from user list"""
+    product = get_object_or_404(Product, id=request.POST.get('defav-btn'))
+    product.favorites.remove(request.user)
+    return render(request, 'users/favs.html')
+
+@login_required()
 def show_favs(request):
     products_list = Product.objects.filter(favorites=request.user).order_by('name')
     title = "Voici vos favoris"

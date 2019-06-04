@@ -26,7 +26,7 @@ class Database_manager:
     def product_chosen(self, query):
         """ Display elements of the product chosen (name, picture, nutriscore)"""
         product = Product.objects.get(name=query)
-        return product.name, product.picture, product.nutriscore, product.category, product.link
+        return product.name, product.picture, product.nutriscore, product.category, product.link, product.id
 
     def get_same_names(self, product_name, product_category):
         """ Get similar product names """
