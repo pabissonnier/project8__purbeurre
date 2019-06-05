@@ -98,6 +98,8 @@ def app(request):
             better_products = Database_manager.extract_products_for_replace(products_datas, better_nutriscore, product_category,
                                                                             best_ratio_list, product_link)
             title = "Voici de meilleurs produits pour remplacer : '%s'" % query
+            if not better_products:
+                title = "Désolé, nous n'avons pas de meilleurs produits pour remplacer : '%s'" % query
             context = {
                 'title': title,
                 'better_products': better_products,
