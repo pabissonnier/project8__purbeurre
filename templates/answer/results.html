@@ -28,7 +28,7 @@
                         {%  if is_liked %}
                             <button name="fav-btn" type="submit" value="{{ product.id }}" class="btn btn-primary">Retirer des favoris</button>
                         {%  else %}
-                            <button name="fav-btn" type="submit" value="{{ product.id }}" class="btn btn-primary">Ajouter aux favoris</button>
+                            <button name="fav-btn" type="submit" value="{{ product.id }}" data-value="{{ query }}" class="btn btn-primary">Ajouter aux favoris</button>
                         {%  endif %}
                     </form>
                 {%  endif %}

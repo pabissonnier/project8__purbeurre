@@ -100,11 +100,9 @@ def app(request):
             title = "Voici de meilleurs produits pour remplacer : '%s'" % query
             context = {
                 'title': title,
-                'name': product_name,
-                'picture': product_picture,
-                'nutriscore': product_nutriscore,
                 'better_products': better_products,
                 'is_liked': is_liked,
+                'query': query,
             }
             return render(request, 'answer/results.html', context)
         except MultipleObjectsReturned:

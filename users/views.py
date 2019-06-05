@@ -3,6 +3,7 @@ from django.contrib import messages
 from .forms import UserRegisterForm
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
+from django.urls import resolve
 
 from answer.models import Product
 
@@ -28,6 +29,7 @@ def profile(request):
 def favs(request):
     """ Add product to user list"""
     product = get_object_or_404(Product, id=request.POST.get('fav-btn'))
+    url = resolve(request.path_info)
     is_liked = False
     if product.favorites.filter(id=request.user.id).exists():
         product.favorites.remove(request.user)
@@ -35,7 +37,7 @@ def favs(request):
     else:
         product.favorites.add(request.user)
         is_liked = True
-    return HttpResponseRedirect(product.get_absolute_url())
+    return redirect(request.META['HTTP_REFERER'])
 
 @login_required()
 def defavs(request):
