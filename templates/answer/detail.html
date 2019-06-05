@@ -20,7 +20,7 @@
                 <img class="img-thumbnail" src="{{ picture }}" alt="{{ name }}">
                 <a href="{{ link }}"> Voir fiche complète </a>
                 <form action="{% url 'application' %}" method="get" accept-charset="utf-8">
-                    <button name="app-query" type="submit" value="{{ name }}">remplacer</button>
+                    <button class="btn btn-secondary btn-xs js-scroll-trigger" name="app-query" type="submit" value="{{ name }}">remplacer</button>
                 </form>
             </div>
             <div class="col-lg-8 text-justify">

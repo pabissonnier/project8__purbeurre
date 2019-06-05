@@ -1,10 +1,11 @@
 {% extends 'users/layout.html' %}
 
 {% block content %}
-  <div class="content-section-profile">
+  <div class="content-section-fav">
     <div class="row justify-content-md-center">
-        <div class="col-md-6 offset-md-3">
-          <h2> {{ title }}</h2>
+        <div class="col-md-12 text-center">
+          <h2>{{ title }}</h2>
+          <hr class="divider my-4">
         </div>
       </div>
     </div>
@@ -12,15 +13,20 @@
         {% for product in products_list %}
             <div class="col-sm-4 text center">
                 <div class="result-display">
-                    <a href="{% url 'detail' product_id=product.id %}">
-                        <div class="product_pic"><img class="img-thumbnail" src="{{ product.picture }}" alt="{{ product.name }}"></div>
-                    </a>
-                    <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
-                    <h3><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h3>
+                    <div class="product_pic">
+                        <a href="{% url 'detail' product_id=product.id %}">
+                            <img class='product' src="{{ product.picture }}" alt="{{ product.name }}">
+                        </a>
+                    </div>
+                    <div class="prod_name">
+                        <a href="{% url 'detail' product_id=product.id %}">
+                        <h4>{{ product.name }}</h4></a>
+                    </div>
                     <form action='{%  url 'defavorite_product' %}' method="post">
                         {%  csrf_token %}
-                        <button name="defav-btn" type="submit" value="{{ product.id }}" class="btn btn-primary">Retirer des favoris</button>
+                        <button name="defav-btn" type="submit" value="{{ product.id }}" class="btn btn-secondary btn-xs js-scroll-trigger">Retirer des favoris</button>
                     </form>
+                    <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
                 </div>
             </div>
             {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}

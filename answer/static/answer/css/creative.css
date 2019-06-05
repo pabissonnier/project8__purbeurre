@@ -633,12 +633,14 @@ img.product{
 }
 
 .prod_name{
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .nc_round {
   position: relative;
-  top: -330px;
+  top: -350px;
   right: -100px;
   background-image: url("../img/circle.png");
   background-repeat: no-repeat;
@@ -2691,14 +2693,16 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #DE9440;
+  border-color: #C45525;
+  margin-top: 5px;
+  margin-bottom: 25px;
 }
 
 .btn-secondary:hover {
   color: #fff;
-  background-color: #5a6268;
-  border-color: #545b62;
+  background-color: #C45525;
+  border-color: #DE9440;
 }
 
 .btn-secondary:focus, .btn-secondary.focus {
@@ -10633,11 +10637,20 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 350px;
 }
 
+.content-section-fav {
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
 .content-section-register {
   height: auto;
   width: 70%;
   padding-top: 200px;
   padding-bottom: 300px;
+}
+
+.profile-bloc {
+  margin-bottom: 150px;
 }
 
 #logo{

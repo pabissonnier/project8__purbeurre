@@ -1,12 +1,21 @@
 {% extends 'users/layout.html' %}
 
 {% block content %}
-  <div class="content-section-profile">
+  <div class="content-section-fav">
     <div class="row justify-content-md-center">
-        <div class="col-md-6 offset-md-3">
-          <h2> {{ user.username }}</h2>
-            <h2>{{ query }}</h2>
+        <div class="col-md-12 text-center">
+          <h2>Vos informations</h2>
+          <hr class="divider my-4">
         </div>
       </div>
     </div>
+    <div class="row justify-content-md-center">
+        <div class="col-md-8 offset-md-2">
+            <div class="profile-bloc">
+                <h4>Nom d'utilisateur: {{ user.username }}</h4>
+                <h4>Email: {{ user.email }}</h4>
+            </div>
+        </div>
+      </div>
+
 {% endblock %}

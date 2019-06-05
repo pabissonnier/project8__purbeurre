@@ -4,7 +4,6 @@ from django.shortcuts import render
 from django.core.exceptions import MultipleObjectsReturned
 from .database_manager import Database_manager
 from django.core.paginator import Paginator
-from difflib import SequenceMatcher
 from django.shortcuts import get_object_or_404
 
 

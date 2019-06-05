@@ -42,7 +42,7 @@ def defavs(request):
 @login_required()
 def show_favs(request):
     products_list = Product.objects.filter(favorites=request.user).order_by('name')
-    title = "Voici vos favoris"
+    title = "Vos favoris"
     context = {
         'products_list': products_list,
         'title': title,

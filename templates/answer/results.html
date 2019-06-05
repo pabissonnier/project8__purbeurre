@@ -28,12 +28,12 @@
                     {%  if is_liked %}
                         <form action='{%  url 'defavorite_product' %}' method="post">
                             {%  csrf_token %}
-                            <button name="defav-btn" type="submit" value="{{ product.id }}" class="btn btn-primary">Retirer des favoris</button>
+                            <button name="defav-btn" type="submit" value="{{ product.id }}" class="btn btn-secondary btn-xs js-scroll-trigger">Retirer des favoris</button>
                         </form>
                     {%  else %}
                         <form action='{%  url 'favorite_product' %}' method="post">
                             {%  csrf_token %}
-                            <button name="fav-btn" type="submit" value="{{ product.id }}" class="btn btn-primary">Ajouter aux favoris</button>
+                            <button name="fav-btn" type="submit" value="{{ product.id }}" class="btn btn-secondary btn-xs js-scroll-trigger">Ajouter aux favoris</button>
                         </form>
                     {%  endif %}
                 {%  endif %}
