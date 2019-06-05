@@ -10618,7 +10618,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .content-section-logout {
   height: auto;
-  width: 50%;
   padding-top: 300px;
   padding-bottom: 400px;
 }
@@ -10638,6 +10637,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .content-section-fav {
+  height: auto;
   padding-top: 150px;
   padding-bottom: 100px;
 }

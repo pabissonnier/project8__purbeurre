@@ -25,7 +25,7 @@
                 <h4>{{ product.name }}</h4></a>
             </div>
             <form action="{% url 'application' %}" method="get" accept-charset="utf-8">
-              <button name="app-query" type="submit" value="{{ product.name }}">chercher</button>
+              <button class="btn btn-secondary btn-xs js-scroll-trigger" name="app-query" type="submit" value="{{ product.name }}">chercher</button>
             </form>
             <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
           </div>
