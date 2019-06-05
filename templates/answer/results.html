@@ -23,14 +23,17 @@
                 <h3><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h3>
 
                 {% if user.is_authenticated %}
-                    <form action='{%  url 'favorite_product' %}' method="post">
-                        {%  csrf_token %}
-                        {%  if is_liked %}
-                            <button name="fav-btn" type="submit" value="{{ product.id }}" class="btn btn-primary">Retirer des favoris</button>
-                        {%  else %}
-                            <button name="fav-btn" type="submit" value="{{ product.id }}" data-value="{{ query }}" class="btn btn-primary">Ajouter aux favoris</button>
-                        {%  endif %}
-                    </form>
+                    {%  if is_liked %}
+                        <form action='{%  url 'defavorite_product' %}' method="post">
+                            {%  csrf_token %}
+                            <button name="defav-btn" type="submit" value="{{ product.id }}" class="btn btn-primary">Retirer des favoris</button>
+                        </form>
+                    {%  else %}
+                        <form action='{%  url 'favorite_product' %}' method="post">
+                            {%  csrf_token %}
+                            <button name="fav-btn" type="submit" value="{{ product.id }}" class="btn btn-primary">Ajouter aux favoris</button>
+                        </form>
+                    {%  endif %}
                 {%  endif %}
             </div>
         </div>

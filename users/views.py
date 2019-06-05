@@ -29,14 +29,7 @@ def profile(request):
 def favs(request):
     """ Add product to user list"""
     product = get_object_or_404(Product, id=request.POST.get('fav-btn'))
-    url = resolve(request.path_info)
-    is_liked = False
-    if product.favorites.filter(id=request.user.id).exists():
-        product.favorites.remove(request.user)
-        is_liked = False
-    else:
-        product.favorites.add(request.user)
-        is_liked = True
+    product.favorites.add(request.user)
     return redirect(request.META['HTTP_REFERER'])
 
 @login_required()
@@ -44,7 +37,7 @@ def defavs(request):
     """ Remove product from user list"""
     product = get_object_or_404(Product, id=request.POST.get('defav-btn'))
     product.favorites.remove(request.user)
-    return HttpResponseRedirect('/favs/')
+    return redirect(request.META['HTTP_REFERER'])
 
 @login_required()
 def show_favs(request):

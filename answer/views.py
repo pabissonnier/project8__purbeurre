@@ -19,7 +19,7 @@ def search(request):
     query = request.GET.get('query')
     global message
     if not query:
-        products_all_list = Product.objects.all()
+        products_all_list = Product.objects.all().order_by('name')
         paginator = Paginator(products_all_list, 9)
         page = request.GET.get('page')
         products_all = paginator.get_page(page)
@@ -30,7 +30,7 @@ def search(request):
         }
         return render(request, 'answer/search.html', context)
     else:
-        products_list = Product.objects.filter(name__icontains=query)
+        products_list = Product.objects.filter(name__icontains=query).order_by('name')
         paginator = Paginator(products_list, 9)
         page = request.GET.get('page')
         products = paginator.get_page(page)
@@ -90,8 +90,7 @@ def app(request):
             product = get_object_or_404(Product, id=product_id)
             is_liked = False
             if product.favorites.filter(id=request.user.id).exists():
-                    """product.favorites.remove(request.user)"""
-                    is_liked = True
+                is_liked = True
 
             better_nutriscore = Database_manager.get_better_nutriscore(products_datas, product_nutriscore)
             best_ratio_list = Database_manager.get_same_names(products_datas, product_name, product_category)
