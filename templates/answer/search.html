@@ -16,51 +16,24 @@
     {% for product in products %}
         <div class="col-sm-4 text center">
           <div class="result-display">
-            <form method="get">
+            <div class="product_pic">
                 <a href="{% url 'detail' product_id=product.id %}">
-                    <div class="product_pic"><img class="img-thumbnail" src="{{ product.picture }}" alt="{{ product.name }}"></div>
-                </a>
-                <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
-                <h3><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h3>
-            </form>
+                <img class='product' src="{{ product.picture }}" alt="{{ product.name }}"></a>
+            </div>
+            <div class="prod_name">
+                <a href="{% url 'detail' product_id=product.id %}">
+                <h4>{{ product.name }}</h4></a>
+            </div>
             <form action="{% url 'application' %}" method="get" accept-charset="utf-8">
               <button name="app-query" type="submit" value="{{ product.name }}">chercher</button>
             </form>
-          </div>
-        </div>
-        {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
-    {% endfor %}
-  {% for product in products_all %}
-        <div class="col-sm-4 text center">
-          <div class="result-display">
-            <a href="{% url 'detail' product_id=product.id %}">
-                <div class="product_pic"><img class="img-thumbnail" src="{{ product.picture }}" alt="{{ product.name }}"></div>
-            </a>
             <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
-            <h3><a href="{% url 'detail' product_id=product.id %}">{{ product.name }}</a></h3>
-            <form action="{% url 'application' %}" method="get" accept-charset="utf-8">
-              <button name="app-query" type="submit" value="{{ product.name }}">chercher</button>
-            </form>
           </div>
         </div>
         {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
     {% endfor %}
 
   <div class="pagination">
-    <span class="step-links">
-        {% if products_all.has_previous %}
-            <a href="?page=1">&laquo; première</a>
-            <a href="?page={{ products_all.previous_page_number }}">précédent</a>
-        {% endif %}
-        <span class="current">
-            Page {{ products_all.number }} of {{ products_all.paginator.num_pages }}.
-        </span>
-        {% if products_all.has_next %}
-            <a href="?page={{ products_all.next_page_number }}">suivant</a>
-            <a href="?page={{ products_all.paginator.num_pages }}">dernière &raquo;</a>
-        {% endif %}
-    </span>
-
     <span class="step-links">
         {% if products.has_previous %}
             <a href="?page=1">&laquo; première</a>
@@ -74,7 +47,6 @@
             <a href="?page={{ products.paginator.num_pages }}">dernière &raquo;</a>
         {% endif %}
     </span>
-</div>
-
   </div>
+</div>
 {% endblock %}

@@ -25,7 +25,7 @@ def search(request):
         products_all = paginator.get_page(page)
         title = "Résultats pour la recherche : '%s'" % query
         context = {
-            'products_all': products_all,
+            'products': products_all,
             'title': title,
         }
         return render(request, 'answer/search.html', context)
@@ -42,7 +42,7 @@ def search(request):
             'title': title,
             'query': query
         }
-        return render(request, 'answer/search.html', context)
+    return render(request, 'answer/search.html', context)
 
 
 def app(request):

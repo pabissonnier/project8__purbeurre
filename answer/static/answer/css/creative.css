@@ -563,26 +563,32 @@ pre code {
   margin-left: auto;
 }
 
+@media (min-width: 320px) {
+  .container-fluid {
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 576px) {
-  .container {
+  .container-fluid {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .container {
+  .container-fluid {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .container {
+  .container-fluid {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container {
+  .container-fluid {
     max-width: 1140px;
   }
 }
@@ -609,21 +615,31 @@ pre code {
   padding-bottom: 100px;
 }
 
-
+img.product{
+  display: block;
+  margin: auto;
+  max-width: 300px;
+  max-height: 200px;
+}
 
 .product_pic {
   position: relative;
   border-width: 1px;
   border-color: #C45525;
   width: 300px;
-  height: 400px;
+  height: 200px;
   display: inline-block;
+  vertical-align: middle;
+}
+
+.prod_name{
+  padding: 10px;
 }
 
 .nc_round {
   position: relative;
-  top: -420px;
-  right: -150px;
+  top: -330px;
+  right: -100px;
   background-image: url("../img/circle.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -10843,6 +10859,20 @@ header.masthead-search {
 
 header.masthead-search h1 {
   font-size: 2.25rem;
+}
+
+@media only screen and (max-width: 425px) {
+  header.masthead {
+    height: auto;
+    min-height: 40rem;
+    width: 100%;
+  }
+  header.masthead p {
+    font-size: 1.15rem;
+  }
+  header.masthead h1 {
+    font-size: 3rem;
+  }
 }
 
 @media (min-width: 992px) {
