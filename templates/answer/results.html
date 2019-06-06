@@ -28,7 +28,7 @@
                     {%  if user in product.favorites.all %}
                         <form action='{%  url 'defavorite_product' %}' method="post">
                             {%  csrf_token %}
-                            <button name="defav-btn" type="submit" value="{{ product.id }}" class="btn btn-secondary btn-xs js-scroll-trigger">Retirer des favoris</button>
+                            <button name="defav-btn" type="submit" value="{{ product.id }}" class="btn btn-tertiary btn-xs js-scroll-trigger">Retirer des favoris</button>
                         </form>
                     {%  else %}
                         <form action='{%  url 'favorite_product' %}' method="post">

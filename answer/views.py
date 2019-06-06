@@ -121,6 +121,7 @@ def detail(request, product_id):
         'ingredients': product.ingredients,
         'shops': product.shops,
         'link': product.link,
+        'product': product,
     }
     return render(request, 'answer/detail.html', context)
 

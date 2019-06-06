@@ -17,14 +17,25 @@
         <div class="row">
             <div class="col-lg-1"></div>
             <div class="col-lg-3">
-                <img class="img-thumbnail" src="{{ picture }}" alt="{{ name }}">
-                <a href="{{ link }}"> Voir fiche complète </a>
+                <img class="img-thumbnail" src="{{ picture }}" alt="{{ name }}"><p></p>
+                <a href="{{ link }}"> <h6>Voir fiche complète</h6> </a><p></p>
                 <form action="{% url 'application' %}" method="get" accept-charset="utf-8">
                     <button class="btn btn-secondary btn-xs js-scroll-trigger" name="app-query" type="submit" value="{{ name }}">remplacer</button>
                 </form>
+                {%  if user in product.favorites.all %}
+                    <form action='{%  url 'defavorite_product' %}' method="post">
+                        {%  csrf_token %}
+                        <button name="defav-btn" type="submit" value="{{ product.id }}" class="btn btn-tertiary btn-xs js-scroll-trigger">Retirer des favoris</button>
+                    </form>
+                {%  else %}
+                    <form action='{%  url 'favorite_product' %}' method="post">
+                        {%  csrf_token %}
+                        <button name="fav-btn" type="submit" value="{{ product.id }}" class="btn btn-secondary btn-xs js-scroll-trigger">Ajouter aux favoris</button>
+                    </form>
+                {%  endif %}
             </div>
             <div class="col-lg-8 text-justify">
-                <h5>Nutriscore : {{ nutriscore }}</h5>
+                <h5>Nutriscore : {{ nutriscore|upper }}</h5>
                 <h5>Magasins : {{ shops }}</h5>
                 <h5>Ingrédients :</h5><p>{{ ingredients }}</p>
 

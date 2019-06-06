@@ -24,7 +24,7 @@
                     </div>
                     <form action='{%  url 'defavorite_product' %}' method="post">
                         {%  csrf_token %}
-                        <button name="defav-btn" type="submit" value="{{ product.id }}" class="btn btn-secondary btn-xs js-scroll-trigger">Retirer des favoris</button>
+                        <button name="defav-btn" type="submit" value="{{ product.id }}" class="btn btn-tertiary btn-xs js-scroll-trigger">Retirer des favoris</button>
                     </form>
                     <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
                 </div>
