@@ -10674,10 +10674,10 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 350px;
 }
 
-.content-section-fav {
+.content-section-contact {
   height: auto;
   padding-top: 150px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .content-section-register {
@@ -10689,6 +10689,16 @@ a.text-dark:hover, a.text-dark:focus {
 
 .profile-bloc {
   margin-bottom: 350px;
+  height: auto;
+}
+
+.contact-bloc{
+  margin-bottom: 350px;
+  height: auto;
+}
+
+.contact-pics{
+  margin-top: 100px;
   height: auto;
 }
 

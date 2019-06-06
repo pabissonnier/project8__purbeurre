@@ -48,3 +48,6 @@ def show_favs(request):
         'title': title,
     }
     return render(request, 'users/favs.html', context)
+
+def contact(request):
+    return render(request, 'users/contact.html')

@@ -20,6 +20,7 @@ urlpatterns = [
     url(r'^logout/', auth_views.LogoutView.as_view(template_name = 'users/logout.html'), name='logout'),
     url(r'^profile/', user_views.profile, name='profile'),
     url(r'^favs/', user_views.show_favs, name='show_favs'),
+    url(r'^contact/', user_views.contact, name='contact'),
 ]
 
 

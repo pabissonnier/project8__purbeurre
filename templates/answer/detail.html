@@ -18,7 +18,7 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-3">
                 <img class="img-thumbnail" src="{{ picture }}" alt="{{ name }}"><p></p>
-                <a href="{{ link }}"> <h6>Voir fiche complète</h6> </a><p></p>
+                <a href="{{ link }}" target="_blank"> <h6>Voir fiche complète</h6> </a><p></p>
                 <form action="{% url 'application' %}" method="get" accept-charset="utf-8">
                     <button class="btn btn-secondary btn-xs js-scroll-trigger" name="app-query" type="submit" value="{{ name }}">remplacer</button>
                 </form>
