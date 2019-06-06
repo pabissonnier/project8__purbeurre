@@ -69,5 +69,3 @@ class Database_manager:
             insertion_datas.save()
         else:
             pass
-
-

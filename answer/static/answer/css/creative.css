@@ -10650,7 +10650,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .profile-bloc {
-  margin-bottom: 150px;
+  margin-bottom: 350px;
+  height: auto;
 }
 
 #logo{
