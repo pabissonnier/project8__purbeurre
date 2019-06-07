@@ -26,6 +26,7 @@ def search(request):
         context = {
             'products': products_all,
             'title': title,
+            'query':query,
         }
         return render(request, 'answer/search.html', context)
     else:
@@ -57,6 +58,7 @@ def app(request):
         context = {
             'title': title,
             'products': products_all,
+            'query': query,
         }
         return render(request, 'answer/list.html', context)
     else:
@@ -68,18 +70,26 @@ def app(request):
                 if space in query:
                     products_ratio_list = Database_manager.find_similar_name(products_datas, query)
                     products = Product.objects.filter(name__in=products_ratio_list).order_by('name')
+                    paginator = Paginator(products, 9)
+                    page = request.GET.get('page')
+                    products_all = paginator.get_page(page)
                     title = "Aucun produit pour : '%s', choisissez un produit dans la liste ci-dessous" % query
                     context = {
                         'title': title,
-                        'products': products,
+                        'products': products_all,
+                        'query': query,
                     }
                     return render(request, 'answer/list.html', context)
                 else:
                     products = Product.objects.filter(name__icontains=query).order_by('name')
+                    paginator = Paginator(products, 9)
+                    page = request.GET.get('page')
+                    products_all = paginator.get_page(page)
                     title = "Plusieurs produits contiennent : '%s', choisissez un produit dans la liste ci-dessous" % query
                     context = {
                         'title': title,
-                        'products': products,
+                        'products': products_all,
+                        'query': query,
                     }
                     return render(request, 'answer/list.html', context)
 
@@ -106,7 +116,8 @@ def app(request):
             title = "Plusieurs produits pour : '%s', choisissez un produit dans la liste ci-dessous" % query
             context = {
                 'title': title,
-                'element': element
+                'element': element,
+                'query': query,
             }
             return render(request, 'answer/list.html', context)
 

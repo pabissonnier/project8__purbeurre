@@ -10892,7 +10892,7 @@ hr.light {
   }
 }
 
-header.masthead {
+header.masthead { , 
   padding-top: 10rem;
   padding-bottom: calc(10rem - 72px);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 90, 97, 0.2)), to(rgba(134, 235, 230, 0.2))), url("../img/bg-masthead.jpg");
@@ -10928,6 +10928,10 @@ header.masthead-search h1 {
     height: auto;
     min-height: 40rem;
     width: 100%;
+    position: fixed;
+    top:0;
+    right:0;
+    left: 0;
   }
   header.masthead p {
     font-size: 1.15rem;
