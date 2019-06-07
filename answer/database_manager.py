@@ -24,7 +24,7 @@ class Database_manager:
         pass
 
     def product_chosen(self, query):
-        """ Display elements of the product chosen (name, picture, nutriscore)"""
+        """ Display elements of the product chosen"""
         product = Product.objects.get(name=query)
         return product.name, product.picture, product.nutriscore, product.category, product.link, product.id
 
@@ -55,9 +55,9 @@ class Database_manager:
 
     def extract_products_for_replace(self, better_nutriscores_list, product_category, best_ratio_list, product_link):
         """ Takes products with same category and higher nutriscore"""
-        better_nutriscores_list = Product.objects.filter(category=product_category).filter(name__in=best_ratio_list).\
+        better_products = Product.objects.filter(category=product_category).filter(name__in=best_ratio_list).\
             filter(nutriscore__in=better_nutriscores_list).exclude(link=product_link)
-        return better_nutriscores_list
+        return better_products
 
     def product_to_userlist(self, product):
         """ To put the product into the userlist table"""
