@@ -68,6 +68,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  width: 100%;
 }
 
 [tabindex="-1"]:focus {
@@ -563,36 +564,6 @@ pre code {
   margin-left: auto;
 }
 
-@media (min-width: 320px) {
-  .container-fluid {
-    max-width: 100%;
-  }
-}
-
-@media (min-width: 576px) {
-  .container-fluid {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container-fluid {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container-fluid {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container-fluid {
-    max-width: 1140px;
-  }
-}
-
 .container-fluid {
   width: 100%;
   padding-right: 15px;
@@ -774,6 +745,7 @@ img.product{
   flex: 0 0 100%;
   max-width: 100%;
 }
+
 
 .order-first {
   -webkit-box-ordinal-group: 0;
@@ -10619,7 +10591,7 @@ a.text-dark:hover, a.text-dark:focus {
   body {
     min-width: 992px !important;
   }
-  .container {
+  .container-fluid {
     min-width: 992px !important;
   }
   .navbar {
@@ -10892,7 +10864,7 @@ hr.light {
   }
 }
 
-header.masthead { , 
+header.masthead { ,
   padding-top: 10rem;
   padding-bottom: calc(10rem - 72px);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 90, 97, 0.2)), to(rgba(134, 235, 230, 0.2))), url("../img/bg-masthead.jpg");
@@ -10928,16 +10900,28 @@ header.masthead-search h1 {
     height: auto;
     min-height: 40rem;
     width: 100%;
-    position: fixed;
-    top:0;
-    right:0;
-    left: 0;
   }
   header.masthead p {
     font-size: 1.15rem;
   }
   header.masthead h1 {
     font-size: 3rem;
+  }
+
+  [class*="col-"] {
+      border: 2px;
+      border-radius: 6px;
+      line-height: 40px;
+      text-align: center;
+  }
+
+  body{
+    width: 100%;
+    display: inline-block;
+  }
+
+  footer{
+    text-align: center;
   }
 }
 
@@ -10979,7 +10963,7 @@ header.masthead-search h1 {
 
 #portfolio .container-fluid .portfolio-box {
   position: relative;
-  display: block;
+  display: inline-block;
 }
 
 #portfolio .container-fluid .portfolio-box .portfolio-box-caption {
