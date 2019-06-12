@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b5f0cd2-598a-4622-aaa9-780b8616c6a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/answer/static/answer/css/creative.css" beforeDir="false" afterPath="$PROJECT_DIR$/answer/static/answer/css/creative.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/answer/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/answer/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer/static/answer/img/DOSSIER D'ADHESION 2019-2020 VF.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer/static/answer/img/QuestionnaireMedical.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer/static/answer/img/demande licence.pdf" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -263,6 +262,14 @@
             <path>
               <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
               <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
+              <item name="answer" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="answer" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
               <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -393,7 +400,7 @@
       <workItem from="1558272079676" duration="37294000" />
       <workItem from="1558508270406" duration="19473000" />
       <workItem from="1558676555290" duration="41580000" />
-      <workItem from="1558976950988" duration="158320000" />
+      <workItem from="1558976950988" duration="158571000" />
     </task>
     <servers />
   </component>
@@ -409,11 +416,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286086000" />
+    <option name="totallyTimeSpent" value="286337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16251831" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
