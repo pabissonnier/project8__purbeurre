@@ -10,11 +10,12 @@
     {% endif %}
   <div class="content-section-login">
     <div class="row justify-content-md-center">
-        <div class="col-md-6 offset-md-3">
+        <div class="col-md-6">
           <form method="post">
                {% csrf_token %}
                <fieldset class="form-group">
-                   <legend class="border-bottom mb-4">Connectez-vous</legend>
+                   <h2>Connectez-vous</h2>
+                    <hr class="divider my-4">
                     {{ form.as_p }}
                </fieldset>
                <div class="form-group">
@@ -23,7 +24,7 @@
            </form>
            <div class="border-top pt-3">
               <small class="text-muted">
-                  Pas encore inscrit ? <a class="ml-2" href="{% url 'register' %}">Sign in</a>
+                  Pas encore inscrit ? <a class="ml-2" href="{% url 'register' %}">Sign up</a>
               </small>
         </div>
         </div>

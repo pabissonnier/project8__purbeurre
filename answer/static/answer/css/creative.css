@@ -10621,12 +10621,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 400px;
 }
 
-.content-section-login {
-  height: auto;
-  width: 50%;
-  padding-top: 250px;
-  padding-bottom: 350px;
-}
+
 
 .content-section-profile {
   padding-top: 150px;
@@ -10637,13 +10632,6 @@ a.text-dark:hover, a.text-dark:focus {
   height: auto;
   padding-top: 150px;
   padding-bottom: 50px;
-}
-
-.content-section-register {
-  height: auto;
-  width: 70%;
-  padding-top: 200px;
-  padding-bottom: 300px;
 }
 
 .profile-bloc {
@@ -11041,10 +11029,17 @@ footer{
     color: #fff;
     background-color: #DE9440;
     border-color: #C45525;
-}
+  }
 
   .content-section-fav {
     padding-top: 150px;
+  }
+
+  .content-section-login {
+    height: auto;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
   }
 
   .result-display {
@@ -11081,6 +11076,38 @@ footer{
     padding-top: 15px;
     width: 20%;
   }
+
+  .contact-bloc {
+    margin-bottom: 100px;
+    height: auto;
+  }
+
+   .contact-bloc img {
+    margin-bottom: 10px;
+  }
+
+  .content-section-logout {
+    height: auto;
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+
+  .content-section-register {
+    height: auto;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+
+  .content-section-register .col-md-8 {
+    text-align: left;
+  }
+
+  .content-section-register small {
+    font-size: 0.7em;
+  }
+
+
 
   footer{
     text-align: center;
@@ -11137,6 +11164,13 @@ footer{
     padding-bottom: 70px;
   }
 
+   .content-section-login {
+    height: auto;
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+
   .result-display {
     padding-bottom: 30px;
     padding-left: 5px;
@@ -11176,6 +11210,41 @@ footer{
     text-align: center;
     padding-top: 15px;
     width: 50%;
+  }
+
+  .contact-bloc {
+    margin-bottom: 100px;
+    height: auto;
+  }
+
+  .contact-bloc img {
+    margin-right: 5px;
+  }
+
+  .contact-pics {
+    margin-top: 80px;
+    margin-left: 180px;
+  }
+
+  .content-section-logout {
+    height: auto;
+    padding-top: 250px;
+    padding-bottom: 200px;
+  }
+
+  .content-section-register {
+    height: auto;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+
+  .content-section-register .col-md-8 {
+    text-align: left;
+  }
+
+  .content-section-register small {
+    font-size: 0.7em;
   }
 
   footer{
@@ -11233,6 +11302,38 @@ footer{
 
   .content-section-fav {
     padding-top: 150px;
+  }
+
+  .content-section-login {
+    height: auto;
+    width: 100%;
+    padding-top: 250px;
+    padding-bottom: 150px;
+  }
+
+  .content-section-register {
+    height: auto;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+
+  .content-section-register .col-md-8 {
+    text-align: left;
+  }
+
+  .contact-bloc {
+    margin-bottom: 100px;
+    height: auto;
+  }
+
+  .contact-bloc img {
+    margin-right: 5px;
+  }
+
+  .contact-pics {
+    margin-top: 80px;
+    margin-left: 25%;
   }
 
   footer{

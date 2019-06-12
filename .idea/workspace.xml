@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b5f0cd2-598a-4622-aaa9-780b8616c6a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/answer/static/answer/img/DOSSIER D'ADHESION 2019-2020 VF.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer/static/answer/img/QuestionnaireMedical.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/answer/static/answer/img/demande licence.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer/static/answer/css/creative.css" beforeDir="false" afterPath="$PROJECT_DIR$/answer/static/answer/css/creative.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/register.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,18 +19,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/answer/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="109" column="31" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
-              <folding>
-                <element signature="e#25#60#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="734">
@@ -42,10 +31,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/users/login.html">
+        <entry file="file://$PROJECT_DIR$/templates/users/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+            <state relative-caret-position="225">
+              <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#small#0;n#p#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,18 +53,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/answer/layout.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
@@ -80,20 +61,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/users/register.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/answer/static/answer/css/creative.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+            <state relative-caret-position="378">
+              <caret line="11106" column="21" selection-start-line="11106" selection-start-column="21" selection-end-line="11106" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/answer/static/answer/css/creative.css">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/users/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="11044" lean-forward="true" selection-start-line="11044" selection-end-line="11044" />
+            <state relative-caret-position="342">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/users/contact.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="25" column="50" lean-forward="true" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -103,15 +93,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
               <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/users/profile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -127,9 +108,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>header</find>
-      <find>masthead</find>
-      <find>nc_rounbd</find>
       <find>btn-sec</find>
       <find>prod_name</find>
       <find>content-se</find>
@@ -157,6 +135,9 @@
       <find>.row</find>
       <find>.product_pic</find>
       <find>mainNav</find>
+      <find>nc_round</find>
+      <find>content-section-login</find>
+      <find>content-section-register</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -181,7 +162,6 @@
         <option value="$PROJECT_DIR$/templates/answer/detail.html" />
         <option value="$PROJECT_DIR$/purbeurre/urls.py" />
         <option value="$PROJECT_DIR$/users/views.py" />
-        <option value="$PROJECT_DIR$/templates/users/contact.html" />
         <option value="$PROJECT_DIR$/templates/answer/results.html" />
         <option value="$PROJECT_DIR$/templates/answer/search.html" />
         <option value="$PROJECT_DIR$/templates/answer/list.html" />
@@ -194,13 +174,14 @@
         <option value="$PROJECT_DIR$/templates/answer/405.html" />
         <option value="$PROJECT_DIR$/templates/405.html" />
         <option value="$PROJECT_DIR$/answer/views.py" />
-        <option value="$PROJECT_DIR$/templates/users/register.html" />
         <option value="$PROJECT_DIR$/purbeurre/settings.py" />
-        <option value="$PROJECT_DIR$/templates/users/login.html" />
         <option value="$PROJECT_DIR$/templates/answer/index.html" />
         <option value="$PROJECT_DIR$/templates/users/profile.html" />
         <option value="$PROJECT_DIR$/templates/answer/layout.html" />
         <option value="$PROJECT_DIR$/templates/users/layout.html" />
+        <option value="$PROJECT_DIR$/templates/users/contact.html" />
+        <option value="$PROJECT_DIR$/templates/users/login.html" />
+        <option value="$PROJECT_DIR$/templates/users/register.html" />
         <option value="$PROJECT_DIR$/answer/static/answer/css/creative.css" />
       </list>
     </option>
@@ -228,44 +209,6 @@
               <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
               <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
               <item name="answer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
-              <item name="answer" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
-              <item name="answer" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="answer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
-              <item name="answer" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="answer" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
-              <item name="answer" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="answer" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="creative.css" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
-              <item name="answer" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="answer" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
@@ -400,7 +343,7 @@
       <workItem from="1558272079676" duration="37294000" />
       <workItem from="1558508270406" duration="19473000" />
       <workItem from="1558676555290" duration="41580000" />
-      <workItem from="1558976950988" duration="158571000" />
+      <workItem from="1558976950988" duration="163016000" />
     </task>
     <servers />
   </component>
@@ -416,10 +359,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286337000" />
+    <option name="totallyTimeSpent" value="290782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16251831" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -601,13 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/answer/search.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
@@ -709,23 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/answer/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -736,24 +656,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/answer/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-162">
           <caret line="30" column="52" lean-forward="true" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -769,6 +675,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="25" column="50" lean-forward="true" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="734">
@@ -779,17 +723,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users/layout.html">
+    <entry file="file://$PROJECT_DIR$/templates/users/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="225">
+          <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#small#0;n#p#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/answer/static/answer/css/creative.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="11044" lean-forward="true" selection-start-line="11044" selection-end-line="11044" />
+        <state relative-caret-position="378">
+          <caret line="11106" column="21" selection-start-line="11106" selection-start-column="21" selection-end-line="11106" selection-end-column="21" />
         </state>
       </provider>
     </entry>
