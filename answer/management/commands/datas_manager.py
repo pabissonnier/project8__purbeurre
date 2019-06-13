@@ -5,7 +5,6 @@ import json
 from answer.models import Product
 
 
-
 class DatasManager:
     """ Class for the management of the datas """
     def __init__(self):
@@ -20,7 +19,7 @@ class DatasManager:
 
         categories_list = []
         for value in categories_data["tags"]:
-            if value["products"] > 2000:
+            if value["products"] > 1000:
                 categories_values = value["name"]
                 categories_list.append(categories_values)
         return categories_list
@@ -84,7 +83,7 @@ class DatasManager:
         for element in category_name_url_list:
             for key_list, value_list in element.items():
                 page = 1
-                while page <= 5:
+                while page <= 10:
                     category_url = "https://fr.openfoodfacts.org/categorie/{0}/{1}.json".format(value_list, page)
                     products_json = urllib.request.urlopen(category_url)
                     products_read = products_json.read()
@@ -118,13 +117,10 @@ class DatasManager:
                     insertion_datas = Product(name= product_name_db, category=product_category_db,
                                              ingredients=product_ingredients_db, nutriscore=product_nutriscore_db,
                                                picture=product_picture_db, shops=product_shops_db, link = product_link_db)
-                    data_inside = Product.objects.filter(link=product_link_db)
-                    if not data_inside:
+                    data_link_already = Product.objects.filter(link=product_link_db)
+                    if not data_link_already:
                         insertion_datas.save()
                     else:
                         pass
                 else:
                     pass
-
-    def get_datas_from_list(self, list):
-        pass

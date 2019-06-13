@@ -10995,7 +10995,7 @@ footer{
   }
 
   header.masthead h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     width: 100%;
     text-align: center;
   }
@@ -11005,7 +11005,7 @@ footer{
   }
 
   header.masthead-search h1 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     width: 100%;
     text-align: center;
   }
@@ -11044,6 +11044,7 @@ footer{
 
   .result-display {
     padding-bottom: 15px;
+    padding-top: 15px;
   }
 
   .product_pic {
@@ -11065,8 +11066,8 @@ footer{
 
   .nc_round {
     position: relative;
-    top: -350px;
-    right: -200px;
+    top: -330px;
+    right: -220px;
     background-image: url("../img/circle.png");
     background-repeat: no-repeat;
     background-position: center;

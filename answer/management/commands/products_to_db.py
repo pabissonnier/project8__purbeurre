@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from answer.models import Product
 from .datas_manager import DatasManager
-from .product_test_list import list
-from django.db import IntegrityError
 
 from django.core.management.base import BaseCommand
 
