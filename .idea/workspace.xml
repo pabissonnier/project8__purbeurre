@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9b5f0cd2-598a-4622-aaa9-780b8616c6a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/answer/static/answer/css/creative.css" beforeDir="false" afterPath="$PROJECT_DIR$/answer/static/answer/css/creative.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/answer/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/answer/detail.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/answer/static/answer/css/creative.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="11121" column="22" lean-forward="true" selection-start-line="11121" selection-start-column="22" selection-end-line="11121" selection-end-column="22" />
+            <state relative-caret-position="184">
+              <caret line="169" column="9" lean-forward="true" selection-start-line="169" selection-start-column="9" selection-end-line="169" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -114,11 +113,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>btn-sec</find>
-      <find>prod_name</find>
-      <find>content-se</find>
-      <find>btn-se</find>
-      <find>bloc</find>
       <find>profile</find>
       <find>content-section-fav</find>
       <find>contact</find>
@@ -144,6 +138,11 @@
       <find>content-section-login</find>
       <find>content-section-register</find>
       <find>jquery</find>
+      <find>86EBE6</find>
+      <find>345A61</find>
+      <find>DE9440</find>
+      <find>a</find>
+      <find>a:hover</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -387,7 +386,7 @@
       <workItem from="1558508270406" duration="19473000" />
       <workItem from="1558676555290" duration="41580000" />
       <workItem from="1558976950988" duration="169668000" />
-      <workItem from="1560405122895" duration="11571000" />
+      <workItem from="1560405122895" duration="12619000" />
     </task>
     <servers />
   </component>
@@ -406,7 +405,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309005000" />
+    <option name="totallyTimeSpent" value="310053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
@@ -762,8 +761,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/answer/static/answer/css/creative.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="11121" column="22" lean-forward="true" selection-start-line="11121" selection-start-column="22" selection-end-line="11121" selection-end-column="22" />
+        <state relative-caret-position="184">
+          <caret line="169" column="9" lean-forward="true" selection-start-line="169" selection-start-column="9" selection-end-line="169" selection-end-column="9" />
         </state>
       </provider>
     </entry>
