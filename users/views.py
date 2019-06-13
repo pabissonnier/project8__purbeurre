@@ -1,9 +1,8 @@
-from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import UserRegisterForm
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
-from django.urls import resolve
 
 from answer.models import Product
 
@@ -32,12 +31,14 @@ def favs(request):
     product.favorites.add(request.user)
     return redirect(request.META['HTTP_REFERER'])
 
+
 @login_required()
 def defavs(request):
     """ Remove product from user list"""
     product = get_object_or_404(Product, id=request.POST.get('defav-btn'))
     product.favorites.remove(request.user)
     return redirect(request.META['HTTP_REFERER'])
+
 
 @login_required()
 def show_favs(request):
@@ -49,5 +50,10 @@ def show_favs(request):
     }
     return render(request, 'users/favs.html', context)
 
+
 def contact(request):
     return render(request, 'users/contact.html')
+
+
+def mentions(request):
+    return render(request, 'users/mentions.html')

@@ -11108,6 +11108,16 @@ footer{
     font-size: 0.7em;
   }
 
+  .mentions-bloc {
+    width: 70%;
+    margin-bottom: 100px;
+    margin-left: 15%;
+  }
+
+  .mentions-bloc p {
+    font-size: 0.8em;
+    text-align: justify;
+  }
 
 
   footer{
@@ -11248,6 +11258,16 @@ footer{
     font-size: 0.8em;
   }
 
+  .mentions-bloc {
+    width: 70%;
+    margin-bottom: 100px;
+    margin-left: 15%;
+  }
+
+  .mentions-bloc p {
+    text-align: justify;
+  }
+
   footer{
     text-align: center;
     width: 100%;
@@ -11335,6 +11355,16 @@ footer{
   .contact-pics {
     margin-top: 80px;
     margin-left: 25%;
+  }
+
+  .mentions-bloc {
+    width: 70%;
+    margin-bottom: 100px;
+    margin-left: 15%;
+  }
+
+  .mentions-bloc p {
+    text-align: justify;
   }
 
   footer{
