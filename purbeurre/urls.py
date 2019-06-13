@@ -10,6 +10,7 @@ from answer import views as answer_views
 urlpatterns = [
     url(r'^$', answer_views.index, name='home'),
     url(r'^answer/', answer_views.app, name='application'),
+    url(r'^answer_/', answer_views.app_sim, name='application_sim'),
     url(r'^(?P<product_id>[0-9]+)/$', answer_views.detail, name='detail'),
     url(r'^favorite_product/$', user_views.favs, name='favorite_product'),
     url(r'^defavorite_product/$', user_views.defavs, name='defavorite_product'),

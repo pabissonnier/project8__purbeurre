@@ -1,0 +1,52 @@
+{% extends 'answer/layout.html' %}
+
+{% block content %}
+  <!-- Masthead -->
+  <header class="masthead-search">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+          <h1 class="text-uppercase text-white font-weight-bold">{{ title }} </h1>
+          <hr class="divider my-4">
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="row h-250 align-items-left justify-content-center text-center">
+        {% for product in products %}
+            <div class="col-sm-4 text center">
+                <div class="result-display">
+                    <div class="product_pic">
+                        <a href="{% url 'detail' product_id=product.id %}">
+                            <img class='product' src="{{ product.picture }}" alt="{{ product.name }}"></a>
+                    </div>
+                    <div class="prod_name">
+                        <a href="{% url 'detail' product_id=product.id %}">
+                            <h4>{{ product.name }}</h4></a>
+                    </div>
+
+                    <form action="{% url 'application_sim' %}" method="get" accept-charset="utf-8">
+                        <button class="btn btn-secondary btn-xs js-scroll-trigger" name="app-query-sim" type="submit" value="{{ product.id }}">chercher</button>
+                    </form>
+                    <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
+        {% endfor %}
+            <div class="pagination">
+                <span class="step-links">
+                    {% if products.has_previous %}
+                        <a href="?app-query={{ query }}&amp;page=1"><button class="btn btn-secondary btn-xs js-scroll-trigger">&laquo; première</button></a>
+                        <a href="?app-query={{ query }}&amp;page={{ products.previous_page_number }}"><button class="btn btn-secondary btn-xs js-scroll-trigger">précédent</button></a>
+                    {% endif %}
+                    {% if products.has_next %}
+                        <span class="current">
+                            Page {{ products.number }} of {{ products.paginator.num_pages }}.
+                        </span>
+                        <a href="?app-query={{ query }}&amp;page={{ products.next_page_number }}"><button class="btn btn-secondary btn-xs js-scroll-trigger">suivant</button></a>
+                        <a href="?app-query={{ query }}&amp;page={{ products.paginator.num_pages }}"><button class="btn btn-secondary btn-xs js-scroll-trigger">dernière &raquo;</button></a>
+                    {% endif %}
+                </span>
+          </div>
+  </div>
+{% endblock %}

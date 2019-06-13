@@ -119,7 +119,29 @@ def app(request):
                 'products': products,
                 'query': query,
             }
-            return render(request, 'answer/list.html', context)
+            return render(request, 'answer/simlist.html', context)
+
+
+def app_sim(request):
+    query = request.GET.get('app-query-sim')
+    products_datas = Database_manager()
+
+    product = Product.objects.get(id=query)
+
+    better_nutriscore = Database_manager.get_better_nutriscore(products_datas, product.nutriscore)
+    best_ratio_list = Database_manager.get_same_names(products_datas, product.name, product.category)
+    better_products = Database_manager.extract_products_for_replace(products_datas, better_nutriscore, product.category,
+                                                                    best_ratio_list, product.link)
+
+    title = "Voici de meilleurs produits pour remplacer : '%s'" % product.name
+    if not better_products:
+        title = "Désolé, nous n'avons pas de meilleurs produits pour remplacer : '%s'" % product.name
+    context = {
+        'title': title,
+        'better_products': better_products,
+        'query': query,
+    }
+    return render(request, 'answer/results.html', context)
 
 
 def detail(request, product_id):
