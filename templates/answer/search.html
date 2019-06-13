@@ -39,10 +39,10 @@
             <a href="?query={{ query }}&amp;page=1"><button class="btn btn-secondary btn-xs js-scroll-trigger">&laquo; première</button></a>
             <a href="?query={{ query }}&amp;page={{ products.previous_page_number }}"><button class="btn btn-secondary btn-xs js-scroll-trigger">précédent</button></a>
         {% endif %}
-        <span class="current">
-            Page {{ products.number }} of {{ products.paginator.num_pages }}.
-        </span>
         {% if products.has_next %}
+            <span class="current">
+                Page {{ products.number }} of {{ products.paginator.num_pages }}.
+            </span>
             <a href="?query={{ query }}&amp;page={{ products.next_page_number }}"><button class="btn btn-secondary btn-xs js-scroll-trigger">suivant</button></a>
             <a href="?query={{ query }}&amp;page={{ products.paginator.num_pages }}"><button class="btn btn-secondary btn-xs js-scroll-trigger">dernière &raquo;</button></a>
         {% endif %}

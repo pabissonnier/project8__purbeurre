@@ -112,11 +112,11 @@ def app(request):
             return render(request, 'answer/results.html', context)
 
         except MultipleObjectsReturned:
-            element = Database_manager.multiple_product_name(products_datas, query)
+            products = Database_manager.multiple_product_name(products_datas, query)
             title = "Plusieurs produits pour : '%s', choisissez un produit dans la liste ci-dessous" % query
             context = {
                 'title': title,
-                'element': element,
+                'products': products,
                 'query': query,
             }
             return render(request, 'answer/list.html', context)
