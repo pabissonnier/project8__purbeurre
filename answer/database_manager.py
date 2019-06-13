@@ -19,12 +19,12 @@ class Database_manager:
 
     def multiple_product_name(self, query):
         """ If many products with similar name """
-        products_list = Product.objects.filter(name=query)
+        products_list = Product.objects.filter(name__iexact=query)
         return products_list
 
     def product_chosen(self, query):
         """ Display elements of the product chosen"""
-        product = Product.objects.get(name=query)
+        product = Product.objects.get(name__iexact=query)
         return product.name, product.picture, product.nutriscore, product.category, product.link, product.id
 
     def product_chosen_sim(self, query):

@@ -4,7 +4,6 @@ from django.shortcuts import render
 from django.core.exceptions import MultipleObjectsReturned
 from .database_manager import Database_manager
 from django.core.paginator import Paginator
-from django.shortcuts import get_object_or_404
 
 
 from .models import Product
@@ -63,7 +62,7 @@ def app(request):
         return render(request, 'answer/list.html', context)
     else:
         try:
-            products = Product.objects.filter(name=query)
+            products = Product.objects.filter(name__iexact=query)
 
             if not products.exists():
                 space = ' '
