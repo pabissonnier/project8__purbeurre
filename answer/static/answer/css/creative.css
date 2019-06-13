@@ -11119,6 +11119,14 @@ footer{
     text-align: justify;
   }
 
+  .detail_section h5 {
+    font-size: 1.1em;
+  }
+
+  .detail_section p {
+    font-size: 0.8em;
+  }
+
 
   footer{
     text-align: center;
