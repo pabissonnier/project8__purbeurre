@@ -22,7 +22,7 @@ class TestUrls(SimpleTestCase):
         self.assertEquals(resolve(url).func, search)
 
     def test_detail_url_resolves(self):
-        url = reverse('detail', args=['product_id'])
-        self.assertEquals(resolve(url).func, detail) # doesn't work
+        url = reverse('detail', args=[1234])
+        self.assertEquals(resolve(url).func, detail)
 
 

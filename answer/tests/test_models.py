@@ -6,16 +6,7 @@ from answer.models import Product
 test_database_manager = script.Database_manager()
 
 
-class IndexPageTestCase(TestCase):
-    def test_index_page(self):
-        response = self.client.get(reverse('home'))
-        self.assertEqual(response.status_code, 200)
 
-
-class SearchPageTestCase(TestCase):
-    def test_search_page(self):
-        response = self.client.get(reverse('search-products'))
-        self.assertEqual(response.status_code, 200)
 
 
 """class TestDatabase_manager(TestCase):
