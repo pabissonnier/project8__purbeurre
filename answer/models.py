@@ -49,7 +49,7 @@ class Product(models.Model):
         return product.name, product.picture, product.nutriscore, product.category, product.link, product.id
 
     def get_same_names(self, product_name, product_category):
-        """ Get similar product names """
+        """ Get similar product names in the same category """
         products_ratio_list = []
         products_list = Product.objects.filter(category=product_category).values('name')
         for element in products_list:
@@ -79,13 +79,3 @@ class Product(models.Model):
             filter(nutriscore__in=better_nutriscores_list).exclude(link=product_link)
         return better_products
 
-    def product_to_userlist(self, product):
-        """ To put the product into the userlist table"""
-        insertion_datas = Product(name=product.name, category=product.category,
-                                  ingredients=product.ingredients, nutriscore=product.nutriscore,
-                                  picture=product.picture, shops=product.shops, link=product.link)
-        data_inside = Product.objects.get(link=product.link)
-        if not data_inside:
-            insertion_datas.save()
-        else:
-            pass

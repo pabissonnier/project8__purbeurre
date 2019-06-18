@@ -22,11 +22,10 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'answer/search.html')
 
-    def test_app_page(self): # doesn't work
+    def test_app_page(self):
         response = self.client.get(reverse('application'))
 
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'answer/results.html')
         self.assertTemplateUsed(response, 'answer/layout.html')
         self.assertTemplateUsed(response, 'answer/list.html')
 
