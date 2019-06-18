@@ -1,9 +1,8 @@
 from django.test import TestCase
 from django.urls import reverse
-import answer.database_manager as script
 from answer.models import Product
 
-test_database_manager = script.Database_manager()
+
 
 
 
