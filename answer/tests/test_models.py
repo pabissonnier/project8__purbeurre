@@ -93,12 +93,12 @@ class ProductTestCase(TestCase):
         best_ratio_list = ["Bâtonnets sablés chocolat au lait", 'Gâteau au chocolat noir', 'Bâtonnets de chocolat',
                   'Biscuits nappés chocolat noir', 'Fitness Chocolat Noir']
 
-        result = ['Gâteau au chocolat noir', 'Biscuits nappés chocolat noir',
-                  'Fitness Chocolat Noir', 'Bâtonnets de chocolat']
+        better_products = Product.objects.filter(category=product_category).filter(name__in=best_ratio_list). \
+            filter(nutriscore__in=better_nutriscore_list).exclude(link=product_link)
 
         function_output = Product.extract_products_for_replace(Product(), better_nutriscore_list, product_category, best_ratio_list,
                                                                product_link)
-        self.assertEqual(function_output, result)
+        self.assertEqual(function_output, better_products)
 
 
 
