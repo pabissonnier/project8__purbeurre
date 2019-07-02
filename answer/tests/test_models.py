@@ -86,7 +86,7 @@ class ProductTestCase(TestCase):
         function_output = Product.get_better_nutriscore(Product(), product_nutriscore)
         self.assertEqual(function_output, result)
 
-    def test_extract_products_for_replace(self): # différence de guillemets
+    def test_extract_products_for_replace(self):
         better_nutriscore_list = ['a', 'b', 'c', 'd', 'e']
         product_category = 'Snacks'
         product_link = 'https://fr.openfoodfacts.org/produit/3350033111868/batonnets-sables-chocolat-au-lait-monoprix-gourmet'

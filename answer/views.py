@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.core.exceptions import MultipleObjectsReturned
 from django.core.paginator import Paginator
 
@@ -144,7 +144,7 @@ def app_sim(request):
 
 def detail(request, product_id):
     """ Display details for the product clicked"""
-    product = Product.objects.get(pk=product_id)
+    product = get_object_or_404(Product, pk=product_id)
     context = {
         'name': product.name,
         'picture': product.picture,

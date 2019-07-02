@@ -1,8 +1,6 @@
 from django.test import TestCase, Client
 from django.urls import reverse
-from answer.models import Product
 from django.contrib.auth.models import User
-import json
 
 
 class LoginTestCase(TestCase):
@@ -15,28 +13,30 @@ class LoginTestCase(TestCase):
             password='password1234'
         )
 
-    def test_register_page(self):
-        response = self.client.get(reverse('register'))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'users/register.html')
-
     def test_login(self):
         self.client.login(username='John', password='password1234')
         response = self.client.get(reverse('login'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'users/login.html')
 
-    def test_profile_page(self):
-        self.client.login(username='John', password='password1234')
-        response = self.client.get(reverse('profile'))
+
+class TestViews(TestCase):
+
+    def setUp(self):
+        self.client = Client()
+
+    def test_register_page(self):
+        response = self.client.get(reverse('register'))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'users/profile.html')
+        self.assertTemplateUsed(response, 'users/register.html')
+
+    def test_profile_page(self):
+        response = self.client.get(reverse('profile'), follow=True)
+        self.assertEqual(response.status_code, 200)
 
     def test_show_favs_page(self):
-        self.client.login(username='John', password='password1234')
-        response = self.client.get(reverse('show_favs'))
+        response = self.client.get(reverse('show_favs'), follow=True)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'users/favs.html')
 
     def test_contact_page(self):
         response = self.client.get(reverse('contact'))

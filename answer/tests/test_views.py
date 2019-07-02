@@ -28,13 +28,14 @@ class TestViews(TestCase):
 
     def test_app_page(self):
         response = self.client.get(reverse('application'))
-
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'answer/layout.html')
-        self.assertTemplateUsed(response, 'answer/list.html')
 
-    def test_app_sim_page(self):
-        response = self.client.get(reverse('application_sim'))
-
+    def test_detail_page_returns_200(self):
+        product_id = Product.objects.get(name='Bâtonnets sablés chocolat au lait').id
+        response = self.client.get(reverse('detail', args=(product_id,)))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'answer/results.html')
+
+    def test_detail_page_returns_400(self):
+        product_id = Product.objects.get(name='Bâtonnets sablés chocolat au lait').id + 1
+        response = self.client.get(reverse('detail', args=(product_id,)))
+        self.assertEqual(response.status_code, 404)
