@@ -30,6 +30,11 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'answer/list.html')
 
     def test_app_sim_page(self): # doesn't work
+        """Product.objects.create(name="Bâtonnets sablés chocolat au lait", id=1295, nutriscore='e',
+                               link='https://fr.openfoodfacts.org/produit/3350033111868/batonnets-sables-chocolat-au-lait-monoprix-gourmet',
+                               category='Snacks',
+                               picture='https://static.openfoodfacts.org/images/products/335/003/311/1868/front_fr.27.400.jpg')"""
+
         response = self.client.get(reverse('application_sim'))
 
         self.assertEqual(response.status_code, 200)

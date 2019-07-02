@@ -76,6 +76,6 @@ class Product(models.Model):
     def extract_products_for_replace(self, better_nutriscores_list, product_category, best_ratio_list, product_link):
         """ Takes products with same category and higher nutriscore"""
         better_products = Product.objects.filter(category=product_category).filter(name__in=best_ratio_list).\
-            filter(nutriscore__in=better_nutriscores_list).exclude(link=product_link)
+            filter(nutriscore__in=better_nutriscores_list).exclude(link=product_link).order_by('name')
         return better_products
 

@@ -86,19 +86,19 @@ class ProductTestCase(TestCase):
         function_output = Product.get_better_nutriscore(Product(), product_nutriscore)
         self.assertEqual(function_output, result)
 
-    def test_extract_products_for_replace(self): # revoir listes et ouput qui est une queryset
+    def test_extract_products_for_replace(self): # différence de guillemets
         better_nutriscore_list = ['a', 'b', 'c', 'd', 'e']
         product_category = 'Snacks'
         product_link = 'https://fr.openfoodfacts.org/produit/3350033111868/batonnets-sables-chocolat-au-lait-monoprix-gourmet'
-        best_ratio_list = ["Bâtonnets sablés chocolat au lait", 'Gâteau au chocolat noir', 'Bâtonnets de chocolat',
-                  'Biscuits nappés chocolat noir', 'Fitness Chocolat Noir']
+        best_ratio_list = ['Bâtonnets sablés chocolat au lait', 'Gâteau au chocolat noir',
+                           'Bâtonnets de chocolat']
 
         better_products = Product.objects.filter(category=product_category).filter(name__in=best_ratio_list). \
-            filter(nutriscore__in=better_nutriscore_list).exclude(link=product_link)
+            filter(nutriscore__in=better_nutriscore_list).exclude(link=product_link).order_by('name')
 
         function_output = Product.extract_products_for_replace(Product(), better_nutriscore_list, product_category, best_ratio_list,
                                                                product_link)
-        self.assertEqual(function_output, better_products)
+        self.assertQuerysetEqual(function_output, better_products)
 
 
 
