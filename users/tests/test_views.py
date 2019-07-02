@@ -24,15 +24,18 @@ class LoginTestCase(TestCase):
         self.client.login(username='John', password='password1234')
         response = self.client.get(reverse('login'))
         self.assertEqual(response.status_code, 200)
-        
+        self.assertTemplateUsed(response, 'users/login.html')
+
     def test_profile_page(self):
+        self.client.login(username='John', password='password1234')
         response = self.client.get(reverse('profile'))
-        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'users/profile.html')
 
-    def test_show_favs_page(self): # doesn't work, need products?
+    def test_show_favs_page(self):
+        self.client.login(username='John', password='password1234')
         response = self.client.get(reverse('show_favs'))
-        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'users/favs.html')
 
     def test_contact_page(self):

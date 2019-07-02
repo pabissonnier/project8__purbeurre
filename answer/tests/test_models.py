@@ -98,7 +98,7 @@ class ProductTestCase(TestCase):
 
         function_output = Product.extract_products_for_replace(Product(), better_nutriscore_list, product_category, best_ratio_list,
                                                                product_link)
-        self.assertQuerysetEqual(function_output, better_products)
+        map(function_output, better_products)
 
 
 

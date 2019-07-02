@@ -8,6 +8,10 @@ class TestViews(TestCase):
 
     def setUp(self):
         self.client = Client()
+        self.product = Product.objects.create(name="Bâtonnets sablés chocolat au lait", id=1295, nutriscore='e',
+                               link='https://fr.openfoodfacts.org/produit/3350033111868/batonnets-sables-chocolat-au-lait-monoprix-gourmet',
+                               category='Snacks',
+                               picture='https://static.openfoodfacts.org/images/products/335/003/311/1868/front_fr.27.400.jpg')
 
     def test_index_page(self):
 
@@ -29,12 +33,7 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'answer/layout.html')
         self.assertTemplateUsed(response, 'answer/list.html')
 
-    def test_app_sim_page(self): # doesn't work
-        """Product.objects.create(name="Bâtonnets sablés chocolat au lait", id=1295, nutriscore='e',
-                               link='https://fr.openfoodfacts.org/produit/3350033111868/batonnets-sables-chocolat-au-lait-monoprix-gourmet',
-                               category='Snacks',
-                               picture='https://static.openfoodfacts.org/images/products/335/003/311/1868/front_fr.27.400.jpg')"""
-
+    def test_app_sim_page(self):
         response = self.client.get(reverse('application_sim'))
 
         self.assertEqual(response.status_code, 200)
