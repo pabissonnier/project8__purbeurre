@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import dj_database_url
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -35,19 +36,18 @@ ALLOWED_HOSTS = ['127.0.0.1:8000', 'purbeurre-yukalike.herokuapp.com']
 if os.environ.get('ENV') == 'PRODUCTION':
 
     # Static files settings
-    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
     # Extra places for collectstatic to find static files.
     STATICFILES_DIRS = (
-        os.path.join(PROJECT_ROOT, 'static'),
+        os.path.join(BASE_DIR, 'static'),
     )
 
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-    db_from_env = dj_database_url.config(conn_max_age=500)
+    db_from_env = dj_database_url.config(conn_max_age=500, ssl_require=True)
     DATABASES['default'].update(db_from_env)
+
 
 # Application definition
 
@@ -154,3 +154,6 @@ INTERNAL_IPS = ['127.0.0.1']
 LOGIN_REDIRECT_URL = 'home'
 
 LOGIN_URL = 'login'
+
+# Activate Django_Heroku
+django_heroku.settings(locals())
