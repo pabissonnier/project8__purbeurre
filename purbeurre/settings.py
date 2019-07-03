@@ -30,7 +30,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:8000', 'purbeurre-yukalike.herokuapp.com']
+ALLOWED_HOSTS = ['purbeurre-yukalike.herokuapp.com']
 
 
 if os.environ.get('ENV') == 'PRODUCTION':
@@ -46,7 +46,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
     db_from_env = dj_database_url.config(conn_max_age=500, ssl_require=True)
-    DATABASES['default'].update(db_from_env)
+    """DATABASES['default'].update(db_from_env)"""
 
 
 # Application definition
