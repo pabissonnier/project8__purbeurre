@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9b5f0cd2-598a-4622-aaa9-780b8616c6a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/purbeurre/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/purbeurre/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/answer/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/answer/layout.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/purbeurre/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="75" column="49" lean-forward="true" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
+            <state relative-caret-position="324">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="e#310#319#0" expanded="true" />
               </folding>
@@ -318,7 +317,7 @@
       <workItem from="1560591037404" duration="22258000" />
       <workItem from="1561378069325" duration="5945000" />
       <workItem from="1561982614498" duration="16769000" />
-      <workItem from="1562082965205" duration="23218000" />
+      <workItem from="1562082965205" duration="24498000" />
     </task>
     <servers />
   </component>
@@ -337,7 +336,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="383956000" />
+    <option name="totallyTimeSpent" value="385236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
@@ -705,8 +704,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/purbeurre/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="75" column="49" lean-forward="true" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
+        <state relative-caret-position="324">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="e#310#319#0" expanded="true" />
           </folding>
