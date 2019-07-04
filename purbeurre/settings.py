@@ -36,14 +36,16 @@ ALLOWED_HOSTS = ['purbeurre-yukalike.herokuapp.com']
 if os.environ.get('ENV') == 'PRODUCTION':
 
     # Static files settings
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
     # Extra places for collectstatic to find static files.
     STATICFILES_DIRS = (
-        os.path.join(BASE_DIR, 'static'),
+        os.path.join(PROJECT_ROOT, 'static'),
     )
 
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 
 
@@ -73,6 +75,9 @@ MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+if os.environ.get('ENV') == 'PRODUCTION':
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'purbeurre.urls'
 
