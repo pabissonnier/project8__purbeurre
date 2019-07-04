@@ -46,10 +46,6 @@ if os.environ.get('ENV') == 'PRODUCTION':
     )
 
 
-
-
-
-
 # Application definition
 
 INSTALLED_APPS = [
