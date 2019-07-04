@@ -2041,7 +2041,7 @@ img.product{
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media  {
   .form-control {
     -webkit-transition: none;
     transition: none;
@@ -10843,7 +10843,7 @@ hr.light {
 header.masthead { ,
   padding-top: 10rem;
   padding-bottom: calc(10rem - 72px);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 90, 97, 0.2)), to(rgba(134, 235, 230, 0.2))),;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 90, 97, 0.2)), to(rgba(134, 235, 230, 0.2)));
   background: linear-gradient(to bottom, rgba(50, 90, 97, 0.7) 0%, rgba(134, 235, 230, 0.7) 100%), url("../img/hom-pic.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -10859,7 +10859,7 @@ header.masthead-search {
   padding-top: 200px;
   margin-bottom: 50px;
   padding-bottom: calc(10rem - 72px);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 90, 97, 0.2)), to(rgba(134, 235, 230, 0.2))),);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 90, 97, 0.2)), to(rgba(134, 235, 230, 0.2)));
   background: linear-gradient(to bottom, rgba(50, 90, 97, 0.7) 0%, rgba(134, 235, 230, 0.7) 100%), url("../img/hom-pic.jpg");
   background-position: center;
   background-repeat: no-repeat;
