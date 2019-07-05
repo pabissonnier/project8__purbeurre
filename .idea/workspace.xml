@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b5f0cd2-598a-4622-aaa9-780b8616c6a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/purbeurre/static/justtofill" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer/dumps/answer.json" beforeDir="false" afterPath="$PROJECT_DIR$/answer/dumps/answer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/answer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/answer/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/purbeurre/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+            <state relative-caret-position="234">
+              <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
               <folding>
                 <element signature="e#310#319#0" expanded="true" />
               </folding>
@@ -27,20 +28,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/answer/layout.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/answer/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+            <state relative-caret-position="522">
+              <caret line="47" column="12" lean-forward="true" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/answer/static/answer/css/creative.css">
+        <entry file="file://$PROJECT_DIR$/templates/answer/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195354">
-              <caret line="10853" column="20" selection-start-line="10853" selection-start-column="20" selection-end-line="10853" selection-end-column="20" />
+            <state relative-caret-position="864">
+              <caret line="48" column="108" selection-start-line="48" selection-start-column="108" selection-end-line="48" selection-end-column="141" />
             </state>
           </provider>
         </entry>
@@ -74,9 +75,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>@media</find>
-      <find>body</find>
-      <find>container</find>
       <find>width</find>
       <find>nav</find>
       <find>media</find>
@@ -104,6 +102,9 @@
       <find>-webkit-inline-box</find>
       <find>hom-pic</find>
       <find>BASE_DIR</find>
+      <find>&quot;favorites&quot;: [2</find>
+      <find>&quot;favorites&quot;</find>
+      <find>&quot;favorites&quot;:</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -112,7 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/answer/management/commands/product_test_list.py" />
         <option value="$PROJECT_DIR$/users/forms.py" />
         <option value="$PROJECT_DIR$/answer/urls.py" />
         <option value="$PROJECT_DIR$/users/models.py" />
@@ -127,7 +127,6 @@
         <option value="$PROJECT_DIR$/templates/users/contact.html" />
         <option value="$PROJECT_DIR$/templates/users/login.html" />
         <option value="$PROJECT_DIR$/templates/users/register.html" />
-        <option value="$PROJECT_DIR$/templates/answer/index.html" />
         <option value="$PROJECT_DIR$/answer/management/commands/products_to_db.py" />
         <option value="$PROJECT_DIR$/answer/management/commands/datas_manager.py" />
         <option value="$PROJECT_DIR$/templates/users/profile.html" />
@@ -163,6 +162,8 @@
         <option value="$PROJECT_DIR$/answer/static/answer/css/creative.css" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/purbeurre/settings.py" />
+        <option value="$PROJECT_DIR$/answer/dumps/answer.json" />
+        <option value="$PROJECT_DIR$/templates/answer/index.html" />
       </list>
     </option>
   </component>
@@ -194,13 +195,13 @@
             <path>
               <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
               <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
-              <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
+              <item name="answer" type="462c0819:PsiDirectoryNode" />
+              <item name="dumps" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
               <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
               <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
@@ -334,7 +335,7 @@
       <workItem from="1561378069325" duration="5945000" />
       <workItem from="1561982614498" duration="16769000" />
       <workItem from="1562082965205" duration="30094000" />
-      <workItem from="1562261082136" duration="2458000" />
+      <workItem from="1562261082136" duration="4678000" />
     </task>
     <servers />
   </component>
@@ -353,7 +354,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="393290000" />
+    <option name="totallyTimeSpent" value="395510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
@@ -437,13 +438,6 @@
             <element signature="n#style#0;n#small#0;n#p#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#1;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/answer/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
         </state>
       </provider>
     </entry>
@@ -612,9 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/answer/dumps/answer.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/tests/test_views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -683,17 +674,41 @@
     <entry file="file://$PROJECT_DIR$/answer/static/answer/img/favicon.ico">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/answer/layout.html">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+        <state relative-caret-position="500">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/answer/dumps/answer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-983">
+          <caret column="220330" selection-start-column="220318" selection-end-column="220330" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purbeurre/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+          <folding>
+            <element signature="e#310#319#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/answer/static/answer/css/creative.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195354">
+        <state relative-caret-position="310">
           <caret line="10853" column="20" selection-start-line="10853" selection-start-column="20" selection-end-line="10853" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/answer/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="48" column="108" selection-start-line="48" selection-start-column="108" selection-end-line="48" selection-end-column="141" />
         </state>
       </provider>
     </entry>
@@ -704,20 +719,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/templates/answer/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/purbeurre/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-          <folding>
-            <element signature="e#310#319#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="522">
+          <caret line="47" column="12" lean-forward="true" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
         </state>
       </provider>
     </entry>
