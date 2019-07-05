@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['purbeurre-yukalike.herokuapp.com']
 # Static files settings
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-
+STATICFILE_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 # Application definition
 
