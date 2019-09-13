@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -87,12 +86,11 @@ WSGI_APPLICATION = 'purbeurre.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'purbeurre1',
-        'USER': 'postgres',
+        'NAME': 'purbeurreprod',
+        'USER': 'pabisso',
         'PASSWORD': '458127',
-        'HOST': '',
+        'HOST': 'localhost',
         'PORT': '5432',
-        'CONN_MAX_AGE': 500
     }
 }
 
@@ -139,5 +137,3 @@ LOGIN_REDIRECT_URL = 'home'
 
 LOGIN_URL = 'login'
 
-# Activate Django_Heroku
-django_heroku.settings(locals())

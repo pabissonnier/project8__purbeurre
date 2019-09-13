@@ -24,7 +24,7 @@ def search(request):
         context = {
             'products': products_all,
             'title': title,
-            'query':query,
+            'query': query,
         }
         return render(request, 'answer/search.html', context)
     else:
