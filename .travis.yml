@@ -11,7 +11,7 @@ services:
   - postgresql
 
 script:
-  - ./manage.py test
+  - py manage.py test
 
 branches:
   only:
