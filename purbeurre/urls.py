@@ -8,6 +8,7 @@ from users import views as user_views
 from answer import views as answer_views
 
 urlpatterns = [
+    url(r'^sentry/', answer_views.sentry_bug),
     url(r'^$', answer_views.index, name='home'),
     url(r'^answer/', answer_views.app, name='application'),
     url(r'^answer_/', answer_views.app_sim, name='application_sim'),
