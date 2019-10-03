@@ -11,13 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import sentry_sdk
-from sentry_sdk.integrations.django import DjangoIntegration
-
-sentry_sdk.init(
-    dsn="https://398ca475dc8e43bb91fb62b1cbf37e55@sentry.io/1729592",
-    integrations=[DjangoIntegration()]
-)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -32,7 +25,7 @@ SECRET_KEY = '6d248859101b132cc5e3e305fc324ee0d25f76125632cf01'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['157.245.47.252', 'purbeurre-yukalike.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'purbeurre-yukalike.herokuapp.com', 'localhost']
 
 # Static files settings
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
