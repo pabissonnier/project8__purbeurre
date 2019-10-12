@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b5f0cd2-598a-4622-aaa9-780b8616c6a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/purbeurre/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/purbeurre/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/purbeurre/settings/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/purbeurre/settings/__init__.py" afterDir="false" />
-    </list>
+    <list default="true" id="9b5f0cd2-598a-4622-aaa9-780b8616c6a6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +34,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/purbeurre/settings/production.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1566" />
+            <state relative-caret-position="324">
+              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -80,7 +79,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/purbeurre/settings/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
@@ -198,7 +197,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/templates/answer/layout.html" />
         <option value="$PROJECT_DIR$/templates/users/layout.html" />
-        <option value="$PROJECT_DIR$/purbeurre/settings/production.py" />
         <option value="$PROJECT_DIR$/purbeurre/urls.py" />
         <option value="$PROJECT_DIR$/answer/views.py" />
         <option value="$PROJECT_DIR$/templates/answer/index.html" />
@@ -207,6 +205,7 @@
         <option value="$PROJECT_DIR$/answer/tests/test_views.py" />
         <option value="$PROJECT_DIR$/purbeurre/settings/__init__.py" />
         <option value="$PROJECT_DIR$/purbeurre/settings.py" />
+        <option value="$PROJECT_DIR$/purbeurre/settings/production.py" />
       </list>
     </option>
   </component>
@@ -405,7 +404,7 @@
       <workItem from="1568274132387" duration="1956000" />
       <workItem from="1568365124699" duration="6715000" />
       <workItem from="1569395318486" duration="5017000" />
-      <workItem from="1570889187536" duration="1107000" />
+      <workItem from="1570889187536" duration="1733000" />
     </task>
     <servers />
   </component>
@@ -427,7 +426,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="453538000" />
+    <option name="totallyTimeSpent" value="454164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
@@ -781,11 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/purbeurre/settings/production.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1566" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/purbeurre/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -797,6 +791,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purbeurre/settings/production.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
         </state>
       </provider>
     </entry>
