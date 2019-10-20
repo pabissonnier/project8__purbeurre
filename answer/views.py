@@ -8,6 +8,10 @@ from django.core.paginator import Paginator
 from .models import Product
 
 
+def sentry(request):
+    return (1/0)
+
+
 def index(request):
     return render(request, 'answer/index.html')
 
