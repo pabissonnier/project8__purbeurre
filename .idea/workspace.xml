@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b5f0cd2-598a-4622-aaa9-780b8616c6a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/400.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/405.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/500.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/answer/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/answer/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/answer/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/answer/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/answer/results.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/answer/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/answer/simlist.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/favs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/logout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/mentions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/purbeurre/templates/answer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/purbeurre/templates/answer/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/purbeurre/templates/answer/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="8" column="97" selection-start-line="8" selection-start-column="97" selection-end-line="8" selection-end-column="97" />
+              <caret line="8" column="95" lean-forward="true" selection-start-line="8" selection-start-column="95" selection-end-line="8" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -63,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state relative-caret-position="288">
+              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -78,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/purbeurre/settings/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="383">
+              <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -154,7 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/users/favs.html" />
         <option value="$PROJECT_DIR$/answer/test_database_manager.py" />
         <option value="$PROJECT_DIR$/templates/answer/400.html" />
         <option value="$PROJECT_DIR$/templates/answer/404.html" />
@@ -199,12 +181,13 @@
         <option value="$PROJECT_DIR$/purbeurre/urls.py" />
         <option value="$PROJECT_DIR$/answer/views.py" />
         <option value="$PROJECT_DIR$/templates/answer/index.html" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/answer/tests/test_views.py" />
         <option value="$PROJECT_DIR$/purbeurre/settings.py" />
         <option value="$PROJECT_DIR$/purbeurre/settings/production.py" />
         <option value="$PROJECT_DIR$/purbeurre/settings/travis.py" />
         <option value="$PROJECT_DIR$/purbeurre/settings/__init__.py" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/purbeurre/templates/answer/index.html" />
       </list>
     </option>
   </component>
@@ -259,19 +242,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\users" />
-      <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\answer\tests" />
-      <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\templates\answer" />
-      <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\templates\users" />
-      <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\answer" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\purbeurre" />
       <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\" />
       <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\answer\tests" />
       <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\templates\" />
       <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\answer\management\commands" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\users" />
+      <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\answer\tests" />
+      <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\templates\answer" />
+      <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\templates\users" />
+      <recent name="C:\Users\pabis\OneDrive\Desktop\OC\Projets\purbeurre\answer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -391,10 +374,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="462266000" />
+    <option name="totallyTimeSpent" value="462315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22181553" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -704,8 +688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state relative-caret-position="288">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -737,31 +721,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/purbeurre/settings.py" />
+    <entry file="file://$PROJECT_DIR$/purbeurre/settings/production.py" />
+    <entry file="file://$PROJECT_DIR$/purbeurre/settings/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/purbeurre/templates/answer/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="8" column="97" selection-start-line="8" selection-start-column="97" selection-end-line="8" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/purbeurre/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1503">
-          <caret line="131" column="59" selection-start-line="131" selection-start-column="59" selection-end-line="131" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/purbeurre/settings/production.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-716">
-          <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/purbeurre/settings/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <caret line="8" column="95" lean-forward="true" selection-start-line="8" selection-start-column="95" selection-end-line="8" selection-end-column="95" />
         </state>
       </provider>
     </entry>
