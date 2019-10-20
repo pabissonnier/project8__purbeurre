@@ -25,7 +25,7 @@ SECRET_KEY = '6d248859101b132cc5e3e305fc324ee0d25f76125632cf01'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'purbeurre-yukalike.herokuapp.com', '206.189.31.61']
+ALLOWED_HOSTS = ['127.0.0.1', 'purbeurre-yukalike.herokuapp.com', '178.62.25.139']
 
 # Static files settings
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
