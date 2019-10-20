@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b5f0cd2-598a-4622-aaa9-780b8616c6a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/purbeurre/settings/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/purbeurre/settings/__init__.py" afterDir="false" />
-    </list>
+    <list default="true" id="9b5f0cd2-598a-4622-aaa9-780b8616c6a6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/purbeurre/settings/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="27" column="80" selection-start-line="27" selection-start-column="80" selection-end-line="27" selection-end-column="80" />
+            <state relative-caret-position="828">
+              <caret line="67" column="9" lean-forward="true" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -84,7 +82,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/purbeurre/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2151">
+            <state relative-caret-position="846">
               <caret line="131" column="59" selection-start-line="131" selection-start-column="59" selection-end-line="131" selection-end-column="59" />
             </state>
           </provider>
@@ -236,12 +234,6 @@
               <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
               <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
-              <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
-              <item name="settings" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -367,7 +359,7 @@
       <workItem from="1568365124699" duration="6715000" />
       <workItem from="1569395318486" duration="5017000" />
       <workItem from="1570889187536" duration="6177000" />
-      <workItem from="1571584054043" duration="1287000" />
+      <workItem from="1571584054043" duration="1899000" />
     </task>
     <servers />
   </component>
@@ -389,7 +381,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="459895000" />
+    <option name="totallyTimeSpent" value="460507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
@@ -685,13 +677,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/purbeurre/settings/production.py" />
-    <entry file="file://$PROJECT_DIR$/templates/answer/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="97" selection-start-line="8" selection-start-column="97" selection-end-line="8" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/answer/tests/test_views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -737,13 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/purbeurre/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2151">
-          <caret line="131" column="59" selection-start-line="131" selection-start-column="59" selection-end-line="131" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/purbeurre/settings/travis.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-828">
@@ -751,10 +729,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/answer/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="97" selection-start-line="8" selection-start-column="97" selection-end-line="8" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purbeurre/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="131" column="59" selection-start-line="131" selection-start-column="59" selection-end-line="131" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/purbeurre/settings/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="80" selection-start-line="27" selection-start-column="80" selection-end-line="27" selection-end-column="80" />
+        <state relative-caret-position="828">
+          <caret line="67" column="9" lean-forward="true" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
         </state>
       </provider>
     </entry>
