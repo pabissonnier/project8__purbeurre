@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b5f0cd2-598a-4622-aaa9-780b8616c6a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/answer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/answer/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/purbeurre/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/purbeurre/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,10 +19,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/purbeurre/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="12" column="59" lean-forward="true" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+            <state relative-caret-position="594">
+              <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
               <folding>
                 <element signature="e#25#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/answer/management/commands/products_to_db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <element signature="e#25#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/answer/management/commands/datas_manager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="76" column="63" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
+              <folding>
+                <element signature="e#25#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -32,12 +56,12 @@
         <entry file="file://$PROJECT_DIR$/purbeurre/templates/answer/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="8" column="95" lean-forward="true" selection-start-line="8" selection-start-column="95" selection-end-line="8" selection-end-column="95" />
+              <caret line="8" column="95" selection-start-line="8" selection-start-column="95" selection-end-line="8" selection-end-column="95" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/answer/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
@@ -61,17 +85,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/purbeurre/settings/travis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-828">
+            <state relative-caret-position="198">
               <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="378">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -88,26 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/purbeurre/settings/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/purbeurre/templates/users/mentions.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2700">
-              <caret line="150" column="78" selection-start-line="150" selection-start-column="78" selection-end-line="150" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/purbeurre/templates/users/contact.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+            <state relative-caret-position="630">
+              <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -209,17 +215,17 @@
         <option value="$PROJECT_DIR$/purbeurre/settings/production.py" />
         <option value="$PROJECT_DIR$/purbeurre/settings/travis.py" />
         <option value="$PROJECT_DIR$/purbeurre/settings/__init__.py" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/purbeurre/urls.py" />
         <option value="$PROJECT_DIR$/answer/views.py" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2208" />
-    <option name="y" value="36" />
-    <option name="width" value="983" />
-    <option name="height" value="521" />
+    <option name="x" value="-1404" />
+    <option name="y" value="229" />
+    <option name="width" value="1382" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -382,6 +388,7 @@
       <workItem from="1569395318486" duration="5017000" />
       <workItem from="1570889187536" duration="6177000" />
       <workItem from="1571584054043" duration="4911000" />
+      <workItem from="1572979599783" duration="1362000" />
     </task>
     <servers />
   </component>
@@ -403,10 +410,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="463650000" />
+    <option name="totallyTimeSpent" value="468621000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-1374" y="221" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22181553" />
@@ -442,16 +449,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/answer/management/commands/datas_manager_test.py" />
     <entry file="file://$PROJECT_DIR$/answer/management/commands/product_test_list.py" />
-    <entry file="file://$PROJECT_DIR$/answer/management/commands/products_to_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#25#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/purbeurre/templates/users/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -470,16 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="24" column="59" lean-forward="true" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/answer/management/commands/datas_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1332">
-          <caret line="76" column="63" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
-          <folding>
-            <element signature="e#25#46#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -688,71 +675,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/purbeurre/settings.py" />
+    <entry file="file://$PROJECT_DIR$/purbeurre/settings/production.py" />
+    <entry file="file://$PROJECT_DIR$/purbeurre/templates/users/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/purbeurre/templates/answer/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="549">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/purbeurre/templates/users/mentions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2700">
+        <state relative-caret-position="549">
           <caret line="150" column="78" selection-start-line="150" selection-start-column="78" selection-end-line="150" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/purbeurre/templates/users/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/purbeurre/settings/travis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-828">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/purbeurre/settings.py" />
-    <entry file="file://$PROJECT_DIR$/purbeurre/settings/production.py" />
-    <entry file="file://$PROJECT_DIR$/purbeurre/settings/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/purbeurre/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="12" column="59" lean-forward="true" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
-          <folding>
-            <element signature="e#25#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/purbeurre/templates/answer/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="8" column="95" lean-forward="true" selection-start-line="8" selection-start-column="95" selection-end-line="8" selection-end-column="95" />
+          <caret line="8" column="95" selection-start-line="8" selection-start-column="95" selection-end-line="8" selection-end-column="95" />
         </state>
       </provider>
     </entry>
@@ -763,6 +705,71 @@
           <folding>
             <element signature="e#25#79#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purbeurre/settings/travis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purbeurre/templates/answer/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purbeurre/settings/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/answer/management/commands/datas_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="76" column="63" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
+          <folding>
+            <element signature="e#25#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/answer/management/commands/products_to_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#25#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purbeurre/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding>
+            <element signature="e#25#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
