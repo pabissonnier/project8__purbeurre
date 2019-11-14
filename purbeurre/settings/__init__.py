@@ -38,6 +38,8 @@ STATICFILE_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStor
 INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'answer.apps.AnswerConfig',
+    'dal',
+    'dal_select2',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
