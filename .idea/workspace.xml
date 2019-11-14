@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b5f0cd2-598a-4622-aaa9-780b8616c6a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/answer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/answer/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/purbeurre/templates/answer/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/purbeurre/templates/answer/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/purbeurre/templates/users/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/purbeurre/templates/users/layout.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -183,6 +185,7 @@
       <workItem from="1572979599783" duration="1362000" />
       <workItem from="1573460759862" duration="1835000" />
       <workItem from="1573727820115" duration="188000" />
+      <workItem from="1573732760130" duration="1209000" />
     </task>
     <servers />
   </component>
@@ -211,7 +214,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
