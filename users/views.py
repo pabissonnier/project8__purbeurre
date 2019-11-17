@@ -3,39 +3,29 @@ from django.contrib import messages
 from .forms import UserRegisterForm
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
-
+from django.core.mail import send_mail
+from django.conf import settings
 from answer.models import Product
 from django.contrib.auth.models import User
 
-from django.http import HttpResponse, JsonResponse
-from .models import Subscribe
-from .utils import SendSubscribeMail
 
-
-def subscribe(request):
+def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-                form.save()
-                email = User.email
-                SendSubscribeMail(email)  # Send the Mail, Class available in utils.py
-                messages.success(request, f'Compte créé avec succès, vous pouvez maintenant vous logger')
-                return redirect('login')
-    else:
-        form = UserRegisterForm()
-    return render(request, 'users/register.html', {'form': form})
+            save_it = form.save()
 
+            subject = "Merci"
+            message = 'Cool'
+            from_email = settings.EMAIL_HOST_USER
+            to_list = [save_it.email, settings.EMAIL_HOST_USER]
+            send_mail(subject, message, from_email, to_list, fail_silently=True)
 
-"""def register(request):
-    if request.method == 'POST':
-        form = UserRegisterForm(request.POST)
-        if form.is_valid():
-            form.save()
             messages.success(request, f'Compte créé avec succès, vous pouvez maintenant vous logger')
             return redirect('login')
     else:
         form = UserRegisterForm()
-    return render(request, 'users/register.html', {'form': form})"""
+    return render(request, 'users/register.html', {'form': form})
 
 
 @login_required()

@@ -25,6 +25,14 @@ SECRET_KEY = '6d248859101b132cc5e3e305fc324ee0d25f76125632cf01'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# For gmail
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'purbeurre.openclassrooms@gmail.com'
+EMAIL_HOST_PASSWORD = '458127Pa'
+EMAIL_PORT = 587
+
+
 ALLOWED_HOSTS = ['127.0.0.1', 'purbeurre-yukalike.herokuapp.com', '178.62.25.139']
 
 # Static files settings
