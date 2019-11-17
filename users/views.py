@@ -6,8 +6,26 @@ from django.shortcuts import get_object_or_404
 
 from answer.models import Product
 
+from django.http import HttpResponse, JsonResponse
+from .models import Subscribe
+from .utils import SendSubscribeMail
 
-def register(request):
+
+def subscribe(request):
+    if request.method == 'POST':
+        email = request.POST['email_id']
+        email_qs = Subscribe.objects.filter(email_id=email)
+        if email_qs.exists():
+            data = {"status": "404"}
+            return JsonResponse(data)
+        else:
+            Subscribe.objects.create(email_id=email)
+            SendSubscribeMail(email)  # Send the Mail, Class available in utils.py
+
+    return HttpResponse("/")
+
+
+"""def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
@@ -16,7 +34,7 @@ def register(request):
             return redirect('login')
     else:
         form = UserRegisterForm()
-    return render(request, 'users/register.html', {'form': form})
+    return render(request, 'users/register.html', {'form': form})"""
 
 
 @login_required()
