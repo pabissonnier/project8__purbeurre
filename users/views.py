@@ -16,11 +16,11 @@ def subscribe(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-                form.save()
-                email = User.email
-                SendSubscribeMail(email)  # Send the Mail, Class available in utils.py
-                messages.success(request, f'Compte créé avec succès, vous pouvez maintenant vous logger')
-                return redirect('login')
+            form.save()
+            email = User.email
+            SendSubscribeMail(email)  # Send the Mail, Class available in utils.py
+            messages.success(request, f'Compte créé avec succès, vous pouvez maintenant vous logger')
+            return redirect('login')
     else:
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
