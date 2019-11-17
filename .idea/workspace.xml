@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b5f0cd2-598a-4622-aaa9-780b8616c6a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/answer/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/purbeurre/templates/answer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/purbeurre/templates/answer/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/purbeurre/templates/answer/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/purbeurre/templates/answer/layout.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/answer/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -69,6 +69,24 @@
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/purbeurre/templates/answer/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="6" column="81" lean-forward="true" selection-start-line="6" selection-start-column="81" selection-end-line="6" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/purbeurre/templates/answer/layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
             </state>
           </provider>
         </entry>
@@ -131,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/answer/404.html" />
         <option value="$PROJECT_DIR$/templates/answer/500.html" />
         <option value="$PROJECT_DIR$/templates/answer/405.html" />
         <option value="$PROJECT_DIR$/templates/users/contact.html" />
@@ -175,18 +192,19 @@
         <option value="$PROJECT_DIR$/purbeurre/settings/production.py" />
         <option value="$PROJECT_DIR$/purbeurre/settings/travis.py" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/purbeurre/templates/answer/index.html" />
         <option value="$PROJECT_DIR$/purbeurre/settings/__init__.py" />
         <option value="$PROJECT_DIR$/answer/autocomplete.py" />
         <option value="$PROJECT_DIR$/purbeurre/urls.py" />
         <option value="$PROJECT_DIR$/answer/models.py" />
         <option value="$PROJECT_DIR$/answer/views.py" />
         <option value="$PROJECT_DIR$/answer/forms.py" />
+        <option value="$PROJECT_DIR$/purbeurre/templates/answer/layout.html" />
+        <option value="$PROJECT_DIR$/purbeurre/templates/answer/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1404" />
+    <option name="x" value="-1510" />
     <option name="y" value="229" />
     <option name="width" value="1382" />
     <option name="height" value="735" />
@@ -219,6 +237,19 @@
               <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
               <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
               <item name="settings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
+              <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
+              <item name="purbeurre" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="answer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="purbeurre" type="b2602c69:ProjectViewProjectNode" />
@@ -377,18 +408,18 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="472041000" />
+    <option name="totallyTimeSpent" value="473311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1374" y="221" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22181553" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22181553" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.328594" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20695102" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20695102" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5308057" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -652,13 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/purbeurre/templates/answer/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/answer/management/commands/datas_manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
@@ -676,13 +700,6 @@
           <folding>
             <element signature="e#25#64#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/purbeurre/templates/answer/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="95" selection-start-line="8" selection-start-column="95" selection-end-line="8" selection-end-column="95" />
         </state>
       </provider>
     </entry>
@@ -767,6 +784,20 @@
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purbeurre/templates/answer/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purbeurre/templates/answer/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="6" column="81" lean-forward="true" selection-start-line="6" selection-start-column="81" selection-end-line="6" selection-end-column="81" />
         </state>
       </provider>
     </entry>
