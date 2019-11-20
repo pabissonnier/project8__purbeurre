@@ -15,8 +15,10 @@ def register(request):
         if form.is_valid():
             save_it = form.save()
 
-            subject = "Merci"
-            message = 'Cool'
+            subject = "Merci pour votre inscription !"
+            message = 'Hello {0},\n\n' \
+                      'Vous pouvez désormais ajouter des produits à votre liste de favoris...\n\n'\
+                      'A bientôt chez Purbeurre'.format(save_it.username)
             from_email = settings.EMAIL_HOST_USER
             to_list = [save_it.email, settings.EMAIL_HOST_USER]
             send_mail(subject, message, from_email, to_list, fail_silently=True)
