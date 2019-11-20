@@ -605,8 +605,8 @@ img.product{
 
 .nc_round {
   position: relative;
-  top: -350px;
-  right: -100px;
+  top: -300px;
+  right: -95px;
   background-image: url("../img/circle.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -11066,7 +11066,7 @@ footer{
 
   .nc_round {
     position: relative;
-    top: -330px;
+    top: -300px;
     right: -220px;
     background-image: url("../img/circle.png");
     background-repeat: no-repeat;
