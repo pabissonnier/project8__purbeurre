@@ -23,11 +23,6 @@ urlpatterns = [
     url(r'^favs/', user_views.show_favs, name='show_favs'),
     url(r'^contact/', user_views.contact, name='contact'),
     url(r'^legalmentions/', user_views.mentions, name='mentions'),
-    url(
-        r'^product-autocomplete/$',
-        answer_views.ProductAutocomplete.as_view(),
-        name='product-autocomplete',
-    ),
 ]
 
 
