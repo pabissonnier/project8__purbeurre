@@ -155,7 +155,9 @@ def app_sim(request):
 
 def detail(request, product_id):
     """ Display details for the product clicked"""
+    products_datas = Product()
     product = get_object_or_404(Product, pk=product_id)
+    is_bio = Product.bio_or_not(products_datas, product)
     context = {
         'name': product.name,
         'picture': product.picture,
@@ -163,7 +165,9 @@ def detail(request, product_id):
         'ingredients': product.ingredients,
         'shops': product.shops,
         'link': product.link,
+        'bio' : product.labels,
         'product': product,
+        'is_bio': is_bio
     }
     return render(request, 'answer/detail.html', context)
 

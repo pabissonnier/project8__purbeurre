@@ -4,7 +4,6 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 from difflib import SequenceMatcher
-from dal import autocomplete
 
 
 class Product(models.Model):
@@ -81,3 +80,10 @@ class Product(models.Model):
             filter(nutriscore__in=better_nutriscores_list).exclude(link=product_link).order_by('name')
         return better_products
 
+    def bio_or_not(self, product):
+        """ Checks if the product is BIO or not for display """
+        if "Bio" in product.labels:
+            is_bio = True
+        else:
+            is_bio = False
+        return is_bio
