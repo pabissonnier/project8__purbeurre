@@ -16,6 +16,7 @@ class Product(models.Model):
     link = models.CharField(max_length=1000, null=True, unique=True)
     picture = models.URLField()
     favorites = models.ManyToManyField(User, related_name='favorite', blank=True)
+    labels = models.CharField(max_length=1000, null=True)
 
     def __str__(self):
         return self.name
