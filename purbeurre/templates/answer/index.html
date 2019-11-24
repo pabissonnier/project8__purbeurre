@@ -2,6 +2,7 @@
 
 {% block content %}
   <!-- Masthead -->
+{% load static %}
 <header class="masthead">
     <div class="container-fluid h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
@@ -17,7 +18,10 @@
             <form  action="{% url 'application' %}" method="get" accept-charset="utf-8">
               <div class="row justify-content-center">
 
-                <div class="col-lg-8 text-center"><input type="text" class='form-control form-control-lg' placeholder="Votre produit" id="appform" name="app-query"></div>
+                <div class="col-lg-7 text-center"><input type="text" class='form-control form-control-lg' placeholder="Votre produit" id="appform" name="app-query"></div>
+                <div class="col-lg-1 text-center">
+                    <label class="btn btn-primary"><img src="{% static 'answer/img/bio.jpg'%}" alt="..." class="img-thumbnail img-check"><input type="checkbox" name="bio" id="item4" value="bio" class="hidden" autocomplete="off"></label>
+                </div>
                 <div class="col-lg-4 text-center"><button class="btn btn-primary btn-xl js-scroll-trigger" type="submit">Remplacer</button></div>
               </div>
             </form>
@@ -73,5 +77,15 @@
       </div>
     </div>
 </section>
+
+
+<!-- JS script here -->
+<script>
+    $(document).ready(function(e){
+            $(".img-check").click(function(){
+                $(this).toggleClass("check");
+            });
+    });
+</script>
 
 {% endblock %}

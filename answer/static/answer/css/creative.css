@@ -603,6 +603,13 @@ img.product{
   padding-right: 10px;
 }
 
+.check
+{
+    opacity:0.5;
+	color:#996;
+
+}
+
 .nc_round {
   position: relative;
   top: -300px;
