@@ -165,7 +165,7 @@ def detail(request, product_id):
         'ingredients': product.ingredients,
         'shops': product.shops,
         'link': product.link,
-        'bio' : product.labels,
+        'labels' : product.labels,
         'product': product,
         'is_bio': is_bio
     }
