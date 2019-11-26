@@ -623,6 +623,14 @@ img.product{
   padding-top: 15px;
 }
 
+.bio-icon {
+  position: relative;
+  top: -300px;
+  right: -95px;
+  text-align: center;
+  padding-top: 5px;
+}
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -11085,6 +11093,15 @@ footer{
     width: 20%;
   }
 
+  .bio-icon {
+  position: relative;
+  top: -300px;
+  right: -220px;
+  text-align: center;
+  padding-top: 5px;
+  width: 20%;
+  }
+
   .contact-bloc {
     margin-bottom: 100px;
     height: auto;
@@ -11237,6 +11254,17 @@ footer{
     padding-top: 15px;
     width: 50%;
   }
+
+    .bio-icon {
+    position: relative;
+    top: -320px;
+    right: -140px;
+    text-align: center;
+    padding-top: 5px;
+    width: 50%;
+  }
+
+
 
   .contact-bloc {
     margin-bottom: 100px;
