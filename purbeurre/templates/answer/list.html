@@ -2,6 +2,7 @@
 
 {% block content %}
   <!-- Masthead -->
+  {% load static %}
   <header class="masthead-search">
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
@@ -29,6 +30,9 @@
                         <button class="btn btn-secondary btn-xs js-scroll-trigger" name="app-query" type="submit" value="{{ product.name }}">chercher</button>
                     </form>
                     <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
+                    {% if 'bio' in product.labels %}
+                      <div class="bio-icon"><img alt="Bio" src="{% static 'answer/img/bio_small.jpg'%}"></div>
+                    {%  endif %}
                 </div>
             </div>
             {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}

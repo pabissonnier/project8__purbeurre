@@ -40,8 +40,8 @@
                     <h5>Nutriscore : {{ nutriscore|upper }}</h5>
                     <h5>Magasins : {{ shops }}</h5>
                     <h5>Ingrédients :</h5><p>{{ ingredients }}</p>
-                    <h5>Labels : {{ labels|upper }}</h5>
-                    {% if is_bio %}<img alt="Bio" src="{% static 'answer/img/bio.jpg'%}">{% endif %}
+                    {% if is_bio %}<h5>Labels : {{ labels|upper }}</h5>
+                    <img alt="Bio" src="{% static 'answer/img/bio.jpg'%}">{% endif %}
                 </div>
             </div>
         </div>

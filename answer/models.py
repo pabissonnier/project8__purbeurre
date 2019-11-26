@@ -82,8 +82,11 @@ class Product(models.Model):
 
     def bio_or_not(self, product):
         """ Checks if the product is BIO or not for display """
-        if "bio" in product.labels:
-            is_bio = True
+        if type(product.labels) == str:
+            if "bio" in product.labels:
+                is_bio = True
+            else:
+                is_bio = False
         else:
             is_bio = False
         return is_bio
