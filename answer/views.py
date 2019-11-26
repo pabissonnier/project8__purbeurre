@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.core.exceptions import MultipleObjectsReturned
 from django.core.paginator import Paginator
 from dal import autocomplete
@@ -161,4 +161,13 @@ def detail(request, product_id):
     return render(request, 'answer/detail.html', context)
 
 
+def bio_filter(request):
+    """ Add bio filter to list"""
+    bio_filter = True
+    return bio_filter
 
+
+def all_filter(request):
+    """ Delete bio filter from list"""
+    bio_filter = False
+    return bio_filter

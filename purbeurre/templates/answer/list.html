@@ -9,6 +9,17 @@
         <div class="col-lg-10 align-self-end">
           <h1 class="text-uppercase text-white font-weight-bold">{{ title }} </h1>
           <hr class="divider my-4">
+            {%  if user in product.favorites.all %}
+                <form action='{%  url 'all_filter' %}' method="post">
+                    {%  csrf_token %}
+                    <button name="all-btn" type="submit" value="{{ products }}" class="btn btn-tertiary btn-xs js-scroll-trigger">Voir les produits BIO</button>
+                </form>
+            {%  else %}
+                <form action='{%  url 'bio_filter' %}' method="post">
+                    {%  csrf_token %}
+                    <button name="bio-btn" type="submit" value="{{ products }}" class="btn btn-secondary btn-xs js-scroll-trigger">Voir tous les produits</button>
+                </form>
+            {%  endif %}
         </div>
       </div>
     </div>
