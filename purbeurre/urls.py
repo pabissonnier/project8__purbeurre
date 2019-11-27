@@ -6,6 +6,9 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from users import views as user_views
 from answer import views as answer_views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     url(r'^$', answer_views.index, name='home'),
@@ -24,11 +27,11 @@ urlpatterns = [
     url(r'^favs/', user_views.show_favs, name='show_favs'),
     url(r'^contact/', user_views.contact, name='contact'),
     url(r'^legalmentions/', user_views.mentions, name='mentions'),
-]
-
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns = [
         url('__debug__/', include(debug_toolbar.urls)),
     ] + urlpatterns
+
