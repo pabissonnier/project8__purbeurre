@@ -27,11 +27,11 @@ urlpatterns = [
     url(r'^favs/', user_views.show_favs, name='show_favs'),
     url(r'^contact/', user_views.contact, name='contact'),
     url(r'^legalmentions/', user_views.mentions, name='mentions'),
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+
 
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns = [
         url('__debug__/', include(debug_toolbar.urls)),
-    ] + urlpatterns
-
+    ] + urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
