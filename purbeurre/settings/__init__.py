@@ -38,6 +38,8 @@ STATICFILE_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStor
 INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'answer.apps.AnswerConfig',
+    'dal',
+    'dal_select2',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -137,3 +139,6 @@ INTERNAL_IPS = ['127.0.0.1']
 LOGIN_REDIRECT_URL = 'home'
 
 LOGIN_URL = 'login'
+
+MAILCHIMP_API_KEY = "3708f6d3555f2662efed2288efe882c5-us5"
+MAILCHIMP_SUBSCRIBE_LIST_ID = "47e975a4aa"

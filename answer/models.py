@@ -4,6 +4,7 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 from difflib import SequenceMatcher
+from dal import autocomplete
 
 
 class Product(models.Model):

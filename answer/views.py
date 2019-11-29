@@ -3,13 +3,20 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.exceptions import MultipleObjectsReturned
 from django.core.paginator import Paginator
-
+from dal import autocomplete
 
 from .models import Product
 
 
-def sentry(request):
-    return (1/0)
+class ProductAutocomplete(autocomplete.Select2QuerySetView):
+    def get_queryset(self):
+
+        qs = Product.objects.all()
+
+        if self.q:
+            qs = qs.filter(name__istartswith=self.q)
+
+        return qs
 
 
 def index(request):

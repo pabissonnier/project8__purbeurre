@@ -8,7 +8,6 @@ from users import views as user_views
 from answer import views as answer_views
 
 urlpatterns = [
-    url(r'^sentry/', answer_views.sentry, name='sentry'),
     url(r'^$', answer_views.index, name='home'),
     url(r'^answer/', answer_views.app, name='application'),
     url(r'^answer_/', answer_views.app_sim, name='application_sim'),
@@ -17,13 +16,18 @@ urlpatterns = [
     url(r'^defavorite_product/$', user_views.defavs, name='defavorite_product'),
     url(r'^search/$', answer_views.search, name='search-products'),
     url(r'^admin/', admin.site.urls),
-    url(r'^register/', user_views.register, name='register'),
+    url(r'^register/', user_views.subscribe, name='register'),
     url(r'^login/', auth_views.LoginView.as_view(template_name = 'users/login.html'), name='login'),
     url(r'^logout/', auth_views.LogoutView.as_view(template_name = 'users/logout.html'), name='logout'),
     url(r'^profile/', user_views.profile, name='profile'),
     url(r'^favs/', user_views.show_favs, name='show_favs'),
     url(r'^contact/', user_views.contact, name='contact'),
     url(r'^legalmentions/', user_views.mentions, name='mentions'),
+    url(
+        r'^product-autocomplete/$',
+        answer_views.ProductAutocomplete.as_view(),
+        name='product-autocomplete',
+    ),
 ]
 
 
