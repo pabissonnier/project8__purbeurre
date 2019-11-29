@@ -38,6 +38,10 @@ ALLOWED_HOSTS = ['127.0.0.1', 'purbeurre-yukalike.herokuapp.com', '178.62.25.139
 # Static files settings
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = '/media/'
+
 STATICFILE_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 
@@ -145,6 +149,3 @@ INTERNAL_IPS = ['127.0.0.1']
 LOGIN_REDIRECT_URL = 'home'
 
 LOGIN_URL = 'login'
-
-MAILCHIMP_API_KEY = "3708f6d3555f2662efed2288efe882c5-us5"
-MAILCHIMP_SUBSCRIBE_LIST_ID = "47e975a4aa"
