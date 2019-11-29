@@ -95,7 +95,7 @@ class DatasManager:
 
     def get_products_datas(self, products_lists):
         global product_name_db, product_category_db, product_ingredients_db, product_nutriscore_db, \
-        product_picture_db, product_shops_db, product_link_db
+        product_picture_db, product_shops_db, product_link_db, product_bio_db
         for category_products_list in products_lists:
             for products_dicts in category_products_list:
                 for key, value in products_dicts.items():
@@ -113,10 +113,13 @@ class DatasManager:
                         product_shops_db = value
                     elif key == "link":
                         product_link_db = value
-                if product_link_db and product_shops_db and product_picture_db and product_nutriscore_db and product_ingredients_db and product_category_db and product_name_db:
+                    elif key == "labels":
+                        product_bio_db = value
+                if product_bio_db and product_link_db and product_shops_db and product_picture_db and product_nutriscore_db and \
+                        product_ingredients_db and product_category_db and product_name_db:
                     insertion_datas = Product(name= product_name_db, category=product_category_db,
                                              ingredients=product_ingredients_db, nutriscore=product_nutriscore_db,
-                                               picture=product_picture_db, shops=product_shops_db, link = product_link_db)
+                                               picture=product_picture_db, shops=product_shops_db, link = product_link_db, labels=product_bio_db)
                     data_link_already = Product.objects.filter(link=product_link_db)
                     if not data_link_already:
                         insertion_datas.save()

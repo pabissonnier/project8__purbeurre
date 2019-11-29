@@ -603,10 +603,17 @@ img.product{
   padding-right: 10px;
 }
 
+.check
+{
+    opacity:0.5;
+	color:#996;
+
+}
+
 .nc_round {
   position: relative;
-  top: -350px;
-  right: -100px;
+  top: -300px;
+  right: -95px;
   background-image: url("../img/circle.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -614,6 +621,14 @@ img.product{
   height: 70px;
   text-align: center;
   padding-top: 15px;
+}
+
+.bio-icon {
+  position: relative;
+  top: -300px;
+  right: -95px;
+  text-align: center;
+  padding-top: 5px;
 }
 
 .no-gutters {
@@ -11066,7 +11081,7 @@ footer{
 
   .nc_round {
     position: relative;
-    top: -330px;
+    top: -300px;
     right: -220px;
     background-image: url("../img/circle.png");
     background-repeat: no-repeat;
@@ -11076,6 +11091,15 @@ footer{
     text-align: center;
     padding-top: 15px;
     width: 20%;
+  }
+
+  .bio-icon {
+  position: relative;
+  top: -300px;
+  right: -220px;
+  text-align: center;
+  padding-top: 5px;
+  width: 20%;
   }
 
   .contact-bloc {
@@ -11230,6 +11254,17 @@ footer{
     padding-top: 15px;
     width: 50%;
   }
+
+    .bio-icon {
+    position: relative;
+    top: -320px;
+    right: -140px;
+    text-align: center;
+    padding-top: 5px;
+    width: 50%;
+  }
+
+
 
   .contact-bloc {
     margin-bottom: 100px;

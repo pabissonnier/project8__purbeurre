@@ -1,15 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.core.exceptions import MultipleObjectsReturned
 from django.core.paginator import Paginator
 
-
 from .models import Product
-
-
-def sentry(request):
-    return (1/0)
 
 
 def index(request):
@@ -148,7 +143,9 @@ def app_sim(request):
 
 def detail(request, product_id):
     """ Display details for the product clicked"""
+    products_datas = Product()
     product = get_object_or_404(Product, pk=product_id)
+    is_bio = Product.bio_or_not(products_datas, product)
     context = {
         'name': product.name,
         'picture': product.picture,
@@ -156,9 +153,20 @@ def detail(request, product_id):
         'ingredients': product.ingredients,
         'shops': product.shops,
         'link': product.link,
+        'labels' : product.labels,
         'product': product,
+        'is_bio': is_bio
     }
     return render(request, 'answer/detail.html', context)
 
 
+def bio_filter(request):
+    """ Add bio filter to list"""
+    bio_filter = True
+    return bio_filter
 
+
+def all_filter(request):
+    """ Delete bio filter from list"""
+    bio_filter = False
+    return bio_filter

@@ -2,12 +2,26 @@
 
 {% block content %}
   <!-- Masthead -->
+  {% load static %}
   <header class="masthead-search">
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
           <h1 class="text-uppercase text-white font-weight-bold">{{ title }} </h1>
           <hr class="divider my-4">
+            {% for product in products %}
+                {% if "bio" in product.labels %}
+                    <form action='{%  url 'all_filter' %}' method="post">
+                        {%  csrf_token %}
+                        <button name="all-btn" type="submit" value="{{ products }}" class="btn btn-tertiary btn-xs js-scroll-trigger">Voir les produits BIO</button>
+                    </form>
+                {% else %}
+                    <form action='{%  url 'bio_filter' %}' method="post">
+                        {%  csrf_token %}
+                        <button name="bio-btn" type="submit" value="{{ products }}" class="btn btn-secondary btn-xs js-scroll-trigger">Voir tous les produits</button>
+                    </form>
+                {% endif %}
+            {% endfor %}
         </div>
       </div>
     </div>
@@ -29,6 +43,9 @@
                         <button class="btn btn-secondary btn-xs js-scroll-trigger" name="app-query" type="submit" value="{{ product.name }}">chercher</button>
                     </form>
                     <div class="nc_round"><h2>{{ product.nutriscore|upper }}</h2></div>
+                    {% if 'bio' in product.labels %}
+                      <div class="bio-icon"><img alt="Bio" src="{% static 'answer/img/bio_small.jpg'%}"></div>
+                    {%  endif %}
                 </div>
             </div>
             {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
