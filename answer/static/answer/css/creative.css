@@ -10654,6 +10654,10 @@ a.text-dark:hover, a.text-dark:focus {
   height: auto;
 }
 
+.profile-text-bloc {
+  padding-top: 20px;
+}
+
 .contact-bloc{
   margin-bottom: 350px;
   height: auto;
