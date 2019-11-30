@@ -32,3 +32,4 @@ urllib3==1.24.1
 Werkzeug==0.15.1
 wrapt==1.10.11
 django-heroku
+pillow
