@@ -17,7 +17,7 @@ class TestViews(TestCase):
         response = self.client.get(reverse('home'))
 
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'answer/index.html')
+        self.assertTemplateUsed(response, '../../purbeurre/templates/answer/index.html')
 
     def test_search_page(self):
         response = self.client.get(reverse('search-products'))
