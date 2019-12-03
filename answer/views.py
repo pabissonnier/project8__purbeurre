@@ -158,15 +158,3 @@ def detail(request, product_id):
         'is_bio': is_bio
     }
     return render(request, 'answer/detail.html', context)
-
-
-def bio_filter(request):
-    """ Add bio filter to list"""
-    bio_filter = True
-    return bio_filter
-
-
-def all_filter(request):
-    """ Delete bio filter from list"""
-    bio_filter = False
-    return bio_filter
