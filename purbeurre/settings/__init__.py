@@ -33,7 +33,7 @@ EMAIL_HOST_PASSWORD = '458127Pa'
 EMAIL_PORT = 587
 
 
-ALLOWED_HOSTS = ['127.0.0.1', 'purbeurre-yukalike.herokuapp.com', '178.62.25.139']
+ALLOWED_HOSTS = ['127.0.0.1', 'purbeurre-yukalike.herokuapp.com', '178.62.25.139', 'localhost']
 
 # Static files settings
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

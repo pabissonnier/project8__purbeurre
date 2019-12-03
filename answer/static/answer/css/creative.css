@@ -10658,6 +10658,11 @@ a.text-dark:hover, a.text-dark:focus {
   padding-top: 20px;
 }
 
+.profile-bloc-change {
+  padding: 100px 250px;
+  text-align: left;
+}
+
 .contact-bloc{
   margin-bottom: 350px;
   height: auto;

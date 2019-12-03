@@ -24,19 +24,32 @@
                    <h4>{{ user.username }}</h4>
                     <p>{{ user.email }}</p>
                 </div>
+                <div class="profile-bloc-change">
+                <form method="POST" enctype="multipart/form-data">
+                     {% csrf_token %}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4"><h4>Modifier</h4></legend>
+                        {% for field in u_form %}
+                          <p>
+                            {{ field.label_tag }}
+                            {{ field }}<br>
+                            {% if field.help_text %}
+                              <small style="color: grey">{{ field.help_text }}</small>
+                            {% endif %}
+                            {% for error in field.errors %}
+                              <p style="color: red">{{ error }}</p>
+                            {% endfor %}
+                          </p>
+                        {% endfor %}
+                        {{ p_form }}
+                    </fieldset>
+                       <div class="form-group">
+                           <button class="btn btn-outline-info" type="submit">Mettre à jour</button>
+                       </div>
+                </div>
+               </form>
             </div>
         </div>
-        <form method="POST" enctype="multipart/form-data">
-             {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Informations du profil</legend>
-                {{ u_form }}<br>
-                {{ p_form }}
-            </fieldset>
-               <div class="form-group">
-                   <button class="btn btn-outline-info" type="submit">Mettre à jour</button>
-               </div>
-           </form>
       </div>
 
 {% endblock %}
