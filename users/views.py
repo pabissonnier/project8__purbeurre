@@ -6,7 +6,6 @@ from django.shortcuts import get_object_or_404
 from django.core.mail import send_mail
 from django.conf import settings
 from answer.models import Product
-from django.contrib.auth.models import User
 
 
 def register(request):

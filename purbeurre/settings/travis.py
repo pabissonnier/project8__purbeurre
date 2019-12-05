@@ -21,6 +21,9 @@ STATIC_URL = '/static/'
 STATICFILE_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 
+MEDIA_ROOT = os.path.join(BASE_DIR, "../media")
+MEDIA_URL = '/purbeurre/media/'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -52,7 +55,7 @@ ROOT_URLCONF = 'purbeurre.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, '../../templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
