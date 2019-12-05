@@ -21,6 +21,9 @@ STATIC_URL = '/static/'
 STATICFILE_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 
+MEDIA_ROOT = os.path.join(BASE_DIR, "../media")
+MEDIA_URL = '/purbeurre/media/'
+
 # Application definition
 
 INSTALLED_APPS = [
